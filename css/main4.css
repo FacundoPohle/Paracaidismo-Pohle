@@ -1,0 +1,269 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    border: 0%;
+    box-sizing: border-box;
+}
+
+.main-fondo {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../imagenes/Facu-26.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 1100px;
+}
+
+.main-fondo__titulo {
+    position: absolute;
+    top: 2rem;
+    left: 4rem;
+    color: rgb(168, 13, 13);
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.productos {
+    color: rgb(255, 255, 255);
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.remeras {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: rgb(255, 255, 255); 
+    padding: 1.5rem;
+    border-radius: 15px;
+    width: 25rem;   
+    transition: 1s;
+}
+
+.remeras:hover {
+    transform: scale(120%);
+}
+
+.remeras__imagen {
+    width: 100%;
+    height: 100%;
+}
+
+.remeras__titulo {
+    color: rgb(0, 0, 0);
+    font-size: 150%;
+    align-self: flex-start;
+}
+
+.remeras__descripcion {
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    width: 100%;
+}
+
+.remeras__precio {
+    background-color: rgb(168, 13, 13);
+    color: rgb(0, 0, 0);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, cursive;
+    padding: 5px 12px 5px 12px;
+    align-self: flex-end;
+}
+
+.gorras {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; 
+    background-color: rgb(255, 255, 255);
+    padding: 1.5rem;
+    border-radius: 15px;
+    width: 25rem;  
+    transition: 1s; 
+}
+
+.gorras:hover {
+    transform: scale(120%);
+}
+
+.gorras__imagen {
+    width: 350px;
+    height: 350px;
+}
+
+.gorras__titulo {
+    color: rgb(0, 0, 0);
+    font-size: 150%;
+    align-self: flex-start;
+}
+
+.gorras__descripcion {
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    width: 100%;
+}
+
+.gorras__precio {
+    background-color: rgb(168, 13, 13);
+    color: rgb(0, 0, 0);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, cursive;
+    padding: 5px 12px 5px 12px;;
+    align-self: flex-end;
+}
+
+.buzos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; 
+    background-color: rgb(255, 255, 255);
+    padding: 1.5rem;
+    border-radius: 15px;
+    width: 25rem;   
+    transition: 1s;
+}
+
+.buzos:hover {
+    transform: scale(120%);
+}
+
+.buzos__imagen {
+    width: 350px;
+    height: 350px;
+}
+
+.buzos__titulo {
+    color: rgb(0, 0, 0);
+    font-size: 150%;
+    align-self: flex-start;
+}
+
+.buzos__descripcion {
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    width:100%;
+}
+
+.buzos__precio {
+    background-color: rgb(168, 13, 13);
+    color: rgb(0, 0, 0);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, cursive;
+    padding: 5px 12px 5px 12px;
+    align-self: flex-end;
+}
+
+.productos__gradiente {
+    background: rgb(255,165,165);
+    background: linear-gradient(to bottom, rgba(255,165,165,1) 35%, rgba(244,235,235,1) 100%);
+}
+
+@media screen and (max-width: 1300px) {
+    .main-fondo {
+        height: 1000px;
+        background-image: url(../imagenes/Facu-46.jpg);
+        background-position-x: center;
+    }
+
+    .main-fondo__titulo {
+        position: absolute;
+        top: 8rem;
+        left: 4rem;
+    }
+
+    .remeras {
+        width:30%;
+    }
+
+    .remeras__imagen {
+        width: 100%;
+        height: 100%;
+    }
+
+    .gorras {
+        width:30%;
+    }
+
+    .gorras__imagen {
+        width: 100%;
+        height: 100%;
+    }
+
+    .buzos {
+        width:30%;
+    }
+
+    .buzos__imagen {
+        width: 100%;
+        height: 100%;
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+    .main-fondo {
+        flex-direction: column;
+        height: 2500px;
+    }
+
+    .main-fondo__titulo {
+        font-size: xx-large;
+        color: rgb(255, 255, 255);
+        position: unset;
+        margin: 5rem 0rem 2rem 0rem;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .productos {
+        flex-direction: column;
+        align-items: center;
+        gap: 10rem;
+        margin-top: 0%;
+    }
+
+    .remeras {
+        width:80%;
+    }
+
+    .remeras__titulo {
+        text-align: center;
+    }
+
+    .remeras__imagen {
+        width: 100%;
+        height: 100%;
+    }
+
+    .gorras {
+        width: 80%;
+    }
+
+    .gorras__titulo {
+        text-align: center;
+    }
+
+    .gorras__imagen {
+        width: 100%;
+        height: 100%;
+    }
+
+    .buzos {
+        width: 80%;
+    }
+
+    .buzos__titulo {
+        text-align: center;
+    }
+
+    .buzos__imagen {
+        width: 100%;
+        height: 100%;
+    }
+}
