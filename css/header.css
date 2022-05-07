@@ -90,6 +90,9 @@ body {
     color: rgb(168, 13, 13);
     text-decoration: none;
 }
+.nav__enlace:hover {
+    color: rgb(168, 13, 13);
+}
 
 @media screen and (max-width :1023px) {
 
@@ -123,10 +126,18 @@ body {
         border-left: none;
     }
 
+    .nav__item:hover {
+       transform: scale(100%);
+    }
+
     .nav__item--close {
         display: block;
     }
     
+    .nav__item--1:hover {
+        transform: scale(100%);
+    }
+
     .nav__enlace {
         color: crimson;
     }
@@ -139,6 +150,7 @@ body {
         position: absolute;
         right: 1rem;
         top: 1.65rem;
+        margin-right: 1rem;
     }
 
     #lateral {
