@@ -93,6 +93,7 @@
 .footer__redes--red-social1:hover {
     transform: scale(140%);
 }
+
 .footer__redes--image {
     width: 100%;
     height: 100%;
@@ -147,5 +148,16 @@
     
     .footer__contacto {
         position: unset;
+    }
+    .footer__boton:hover {
+        transform: scale(100%);
+    }
+    
+    .footer__redes--red-social:hover {
+        transform: scale(100%);
+    }
+    
+    .footer__redes--red-social1:hover {
+        transform: scale(100%);
     }
 }

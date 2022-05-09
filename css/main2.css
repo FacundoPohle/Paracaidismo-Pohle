@@ -108,7 +108,6 @@
     .main-fondo__titulo {
         font-size: xx-large;
         color: rgb(255, 255, 255);
-        position: unset;
     }
 
     .main-fondo {

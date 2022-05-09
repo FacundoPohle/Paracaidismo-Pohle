@@ -9,36 +9,22 @@
     background-image: url(../imagenes/Facu-26.jpg);
     background-attachment: fixed;
     background-size: cover;
-    height: 800px;
-}
-.grid {
-    margin-top: 8rem;
-    display: grid;
-    grid-template-columns: 85% 15%;
-    grid-template-rows: 100px 300px 300px;
-    grid-template-areas: 
-    "el1 el1"
-    "el2 el3"
-    "el2 el3";
-}
-.grid__titulo {
-    grid-area: el1;
-    color: rgb(168, 13, 13);
-    padding: 1.5rem;
-    font-size: 45px;
-    font-weight: bold;
-    width: 100%;
-    height: 100%;
+    min-height: 500px;
 }
 
-.grid__seccion {
-    grid-area: el2;
+.main-fondo__titulo {
+    padding-top: 12rem;
+    color: rgb(168, 13, 13);
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.seccion {
     background-color: rgba(0, 0, 0, 0.5);
     color: rgb(255, 255, 255);
     font-size: large;
     padding: 1.5rem;
-    width: 100%;
-    height: 100%;
 }
 
 .seccion__titulo {
@@ -54,12 +40,10 @@
 }
 
 .aside {
-    grid-area: el3;
     background-color: rgba(0, 0, 0, 0.5);
     color: rgb(255, 255, 255);
     font-size: small;
     padding: 1.5rem;
-    width: 100%; 
 }
 
 .aside__titulo {
@@ -71,20 +55,9 @@
      background-color: rgba(0, 0, 0, 0.5);
      text-align: justify;
      padding: 1rem;
- }
+}
 
  @media screen and (max-width: 1300px) {
-    .main-fondo {
-        height: 1100px;        
-     }
-    
-    .grid {
-        grid-template-rows: 100px 470px 470px;
-    }
-     .grid__titulo {
-         font-size: xx-large;
-     }
-
      .aside__titulo {
          font-size: medium;
      }
@@ -94,120 +67,17 @@
      }
 }
  @media screen and (max-width: 1023px) {
-    .main-fondo {
-        height: 1100px;        
+    .main-fondo {    
         background-image: url(../imagenes/Facu-46.jpg);
         background-position-x: center;
      }
 
-    .grid {
-        margin-top: 5.5rem;
-        grid-template-columns: 100%;
-        grid-template-rows: 150px repeat(2, 320px) 250px;
-        grid-template-areas: 
-        "el1"
-        "el2"
-        "el2"
-        "el3";
-    }
-
-    .grid__titulo {
-        text-align: center;
+     .main-fondo__titulo {
         font-size: xx-large;
         color: rgb(255, 255, 255);
-    }
-
-    .seccion {
-        width: 100%;
-        margin-top: 28rem;
     }
 
     .seccion__descripcion {
         font-size: medium;
     }
-    .aside {
-        width: 100%;
-        margin-top: 1rem;
-    }
-
 }
-
-@media screen and (max-width: 780px) {
-    .main-fondo {
-        height: 1400px;        
-     }
-
-    .grid {
-        margin-top: 5.5rem;
-        grid-template-columns: 100%;
-        grid-template-rows: 180px repeat(4, 300px);
-        grid-template-areas: 
-        "el1"
-        "el2"
-        "el2"
-        "el2"
-        "el3";
-    }
-
-@media screen and (max-width: 600px) {
-    .main-fondo {
-        height: 1800px;        
-        background-image: url(../imagenes/Facu-46.jpg);
-        background-position-x: center;
-     }
-
-     .grid {
-        margin-top: 5.5rem;
-        grid-template-columns: 100%;
-        grid-template-rows: 300px repeat(4, 370px);
-        grid-template-areas: 
-        "el1"
-        "el2"
-        "el2"
-        "el2"
-        "el3";
-    }
- }
-
- @media screen and (max-width: 485px) {
-    .main-fondo {
-        height: 2100px;        
-        background-image: url(../imagenes/Facu-46.jpg);
-        background-position-x: center;
-     }
-
-     .grid {
-        margin-top: 5.5rem;
-        grid-template-columns: 100%;
-        grid-template-rows: 200px repeat(3, 500px) 390px;
-        grid-template-areas: 
-        "el1"
-        "el2"
-        "el2"
-        "el2"
-        "el3";
-    }
- }
-
- @media screen and (max-width: 325px) {
-    .main-fondo {
-        height: 3150px;        
-        background-image: url(../imagenes/Facu-46.jpg);
-        background-position-x: center;
-     }
-
-     .grid {
-        margin-top: 5.5rem;
-        grid-template-columns: 100%;
-        grid-template-rows: 280px repeat(6, 470px);
-        grid-template-areas: 
-        "el1"
-        "el2"
-        "el2"
-        "el2"
-        "el2"
-        "el2"
-        "el3";
-    }
- }
-
