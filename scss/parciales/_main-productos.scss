@@ -1,0 +1,72 @@
+/*MAIN PRODUCTOS CODE*/
+/*MAIN PRODUCTOS CODE*/
+/*MAIN PRODUCTOS CODE*/
+/*MAIN PRODUCTOS CODE*/
+/*MAIN PRODUCTOS CODE*/
+
+
+.main-fondo4 {
+    background-image: url(../imagenes/Facu-26.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 500px;
+}
+
+.main-fondo__titulo--4 {
+    padding-top: 12rem;
+    color: rgb(168, 13, 13);
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: rgb(255, 255, 255); 
+    padding: 1.5rem;
+    border-radius: 15px; 
+    transition: 1s;
+}
+
+.producto:hover {
+    transform: scale(110%);
+}
+
+.producto__imagen {
+    width: 100%;
+    height: 100%;
+}
+
+.producto__titulo {
+    color: rgb(0, 0, 0);
+    font-size: 150%;
+    align-self: flex-start;
+    padding-top: 1rem;
+}
+
+.producto__descripcion {
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    width: 100%;
+}
+
+.producto__precio {
+    background-color: rgb(168, 13, 13);
+    color: rgb(0, 0, 0);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, cursive;
+    padding: 5px 12px 5px 12px;
+    align-self: flex-end;
+}
+
+.productos__gradiente {
+    background: rgb(255,165,165);
+    background: linear-gradient(to bottom, rgba(255,165,165,1) 35%, rgba(244,235,235,1) 100%);
+}
+
+.botones-gradiente {
+    background: rgb(185,0,0);
+    background: linear-gradient(to bottom, rgba(185,0,0,1) 35%, rgba(88,3,3,1) 100%);
+}

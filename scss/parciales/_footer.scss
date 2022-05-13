@@ -1,0 +1,103 @@
+/*FOOTER CODE*/
+/*FOOTER CODE*/
+/*FOOTER CODE*/
+/*FOOTER CODE*/
+/*FOOTER CODE*/
+
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    width: 100%;
+    min-height: 250px;
+}
+
+.footer__image {
+    margin: 1.5rem 0rem 0rem 1rem;
+    width: 60px;
+    height: 60px;
+}
+
+.footer__suscripcion {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+
+}
+
+.footer__sugerencia {
+    font-size: 90%;
+}
+
+.footer__email {
+    padding-right: 1.5rem;
+}
+
+.footer__boton {
+    background-color: rgb(168, 13, 13);
+    color: rgb(255, 255, 255);
+    font-family: 'Rubik Microbe', cursive;
+    padding: 5px 12px 5px 12px;
+    transition: 1s;
+}
+
+.footer__boton:hover {
+    transform: scale(120%);
+}
+
+.footer__contacto {
+    position: absolute;
+    right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__contacto--sugerencia {
+   margin: 1rem; 
+   font-size: 70%;
+}
+
+.footer__redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    gap: 50px;
+    order: -1;
+}
+
+.footer__redes--red-social {
+    width: 50px;
+    height: 50px;
+    transition: 0.5s;
+}
+
+.footer__redes--red-social:hover {
+    transform: scale(140%);
+}
+
+.footer__redes--red-social1 {
+    width: 45px;
+    height: 45px;
+    transition: 0.5s;
+}
+
+.footer__redes--red-social1:hover {
+    transform: scale(140%);
+}
+
+.footer__redes--image {
+    width: 100%;
+    height: 100%;
+}
+.footer__map {
+    width: 340px;
+    height: 110px;
+}
