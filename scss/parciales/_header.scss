@@ -7,7 +7,7 @@
 
 body {
     background-color: rgb(255, 255, 255);
-    font-family: 'Anek Odia', sans-serif;
+    font-family: $font-body;
 }
 
 .header {
@@ -22,74 +22,78 @@ body {
     padding: 1rem;
     width: 100%;
     z-index: 10;
-}
 
-.header__open {
-    display: none;
-}
-
-.header__marca {
-    margin-left: 1rem;
-    width: 100px;
-    height: 100px;
-}
-
-.header__image {
-    width: 100%;
-    height: 100%;
-}
-
-.header__description {
-    padding: 15px;
-    color: rgb(255, 255, 255);
-    width: 5%;
-    margin-bottom: 0rem;
+    &__open {
+        display: none;
+    }
+    
+    &__marca {
+        margin-left: 1rem;
+        width: 100px;
+        height: 100px;
+    }
+    
+    &__image {
+        width: 100%;
+        height: 100%;
+    }
+    
+    &__description {
+        padding: 15px;
+        color: rgb(255, 255, 255);
+        width: 5%;
+        margin-bottom: 0rem;
+    }
 }
 
 .nav {
     position: absolute;
     right: 0rem;
     padding-right: 2rem;
-}
 
-.nav__lista {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    list-style-type: none;
-    font-weight: bold;
-    font-size: 120%;
-    margin-bottom: 0rem;
-}
+    &__lista {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        list-style-type: none;
+        font-weight: bold;
+        font-size: 120%;
+        margin-bottom: 0rem;
+    }
+    
+    &__item{
+        padding-left: 1.5rem;
+        margin-left: 30px;
+        border-left: solid $color-principal;
+        transition: 0.5s;
 
-.nav__item{
-    padding-left: 1.5rem;
-    margin-left: 30px;
-    border-left: solid rgb(168, 13, 13);
-    transition: 0.5s;
-}
+        &:hover {
+            transform: scale(120%);
+        }
 
-.nav__item:hover {
-    transform: scale(120%);
-}
+            
+        &--close {
+        display: none;
+        }
 
-.nav__item--1 {
-    margin-left: 40px;
-    transition: 0.5s;
-}
+        &--1 {
+            margin-left: 40px;
+            transition: 0.5s;
+    
+            &:hover {
+                transform: scale(120%);
+            }
+        }
+    }
+    
+    &__enlace {
+        color: $color-principal;
+        text-decoration: none;
 
-.nav__item--1:hover {
-    transform: scale(120%);
+        &:hover {
+            color: $color-principal;
+        }
+    }
+    
 }
-
-.nav__item--close {
-    display: none;
-}
-
-.nav__enlace {
-    color: rgb(168, 13, 13);
-    text-decoration: none;
-}
-.nav__enlace:hover {
-    color: rgb(168, 13, 13);
-}
+    

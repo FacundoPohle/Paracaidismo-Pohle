@@ -27,11 +27,11 @@
     .main-fondo4 {
         background-image: url(../imagenes/Facu-46.jpg);
         background-position-x: center;
-    }
 
-    .main-fondo__titulo--4 {
-        font-size: xx-large;
-        color: rgb(255, 255, 255);
+        &__titulo {
+            font-size: xx-large;
+            color: rgb(255, 255, 255);
+        }
     }
 
     .producto:hover {
@@ -60,38 +60,39 @@
 
     .nav {
         display: none;
-    }
 
-    .nav__lista {
-        flex-direction: column;
-        justify-content: center;
-        padding-top: 2rem;
-        font-size: 100%;
-        font-weight: bolder;
-        height: 100%;
-        gap: 3rem;
-    }
+        &__enlace {
+            color: crimson;
+        }
 
-    .nav__item {
-        margin-left: 40px;
-        padding-left: 0rem;
-        border-left: none;
-    }
-
-    .nav__item:hover {
-       transform: scale(100%);
-    }
-
-    .nav__item--close {
-        display: block;
-    }
+        &__lista {
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 2rem;
+            font-size: 100%;
+            font-weight: bolder;
+            height: 100%;
+            gap: 3rem;
+        }
     
-    .nav__item--1:hover {
-        transform: scale(100%);
-    }
-
-    .nav__enlace {
-        color: crimson;
+        &__item {
+            margin-left: 40px;
+            padding-left: 0rem;
+            border-left: none;
+    
+            &:hover {
+                transform: scale(100%);
+             }
+    
+             
+            &--close {
+                display: block;
+             }
+    
+            &--1:hover {
+                transform: scale(100%);
+            }
+        }
     }
 
     .header__open {
@@ -123,28 +124,29 @@
 
 /*INICIO QUERIE*/
 
-    .main-fondo__titulo {
-        font-size: xx-large;
-        color: rgb(255, 255, 255);
-        text-align: center;
-        padding-bottom: 1.5rem;
-    }
 
     .main-fondo {
         font-size: small;
         background-image: url(../imagenes/Facu-46.jpg);
         background-position-x: center;
+
+        &__titulo {
+            font-size: xx-large;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding-bottom: 1.5rem;
+        }
+
+        &__subtitulo {
+            text-align: center;
+            width: 100%;
+            margin-left: 0%;
+            padding: 1rem;
+        }
     }
 
     .centrado {
         text-align: center;
-    }
-    
-    .main-fondo__subtitulo {
-        text-align: center;
-        width: 100%;
-        margin-left: 0%;
-        padding: 1rem;
     }
 
     @keyframes coder {
@@ -163,17 +165,17 @@
 
  /*RESERVAS QUERIE*/
 
-    .main-fondo__titulo--2 {
-        font-size: xx-large;
-        color: rgb(255, 255, 255);
-    }
-
     .main-fondo2 {
         font-size: small;
         background-image: url(../imagenes/Facu-46.jpg);
         background-position-x: center;
         background-repeat: repeat;
         width: 100%;
+
+        &__titulo {
+            font-size: xx-large;
+            color: rgb(255, 255, 255);
+        }
     }
 
     .formulario {
@@ -186,12 +188,12 @@
     .main-fondo3 {    
         background-image: url(../imagenes/Facu-46.jpg);
         background-position-x: center;
+
+        &__titulo {
+            font-size: xx-large;
+            color: rgb(255, 255, 255);
+        }
      }
- 
-     .main-fondo__titulo--3 {
-        font-size: xx-large;
-        color: rgb(255, 255, 255);
-    }
  
     .seccion__descripcion {
         font-size: medium;
@@ -205,57 +207,59 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-    }
 
-    .footer__suscripcion {
-        justify-content: center;
-        align-items: center;
-        font-size: 80%;
-    }
+        &__suscripcion {
+            justify-content: center;
+            align-items: center;
+            font-size: 80%;
+        }
+        
+        &__boton {
+            padding: 0.2rem;
     
-    .footer__boton {
-        padding: 0.2rem;
-    }
-
-    .footer__redes {
-        margin: 0.2rem;
-        gap: 28px;
-    }
-
-    .footer__redes--red-social {
-        width: 40px;
-        height: 40px;
-    }
-
-    .footer__redes--red-social1 {
-        width: 35px;
-        height: 35px;
-    }
-    .footer__image {
-        margin: 1rem;
-        width: 40px;
-        height: 40px;
-        order: 1;
-    }
-
-    .footer__map {
-        width: 280px;
-        height: 80px;
-    }
+            &:hover {
+                transform: scale(100%);
+            }
+        }
     
-    .footer__contacto {
-        position: unset;
-    }
-    .footer__boton:hover {
-        transform: scale(100%);
-    }
+        &__redes {
+            margin: 0.2rem;
+            gap: 28px;
     
-    .footer__redes--red-social:hover {
-        transform: scale(100%);
-    }
+        &--red-social {
+            width: 40px;
+            height: 40px;
     
-    .footer__redes--red-social1:hover {
-        transform: scale(100%);
+            &:hover {
+                transform: scale(100%);
+            }
+        }
+    
+        &--red-social1 {
+            width: 35px;
+            height: 35px;
+    
+            &:hover {
+                transform: scale(100%);
+            }
+        }
+        }
+    
+        &__image {
+            margin: 1rem;
+            width: 40px;
+            height: 40px;
+            order: 1;
+        }
+    
+        &__map {
+            width: 280px;
+            height: 80px;
+        }
+        
+        &__contacto {
+            position: unset;
+        }
     }
 }
 

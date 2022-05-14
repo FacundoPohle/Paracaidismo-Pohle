@@ -10,14 +10,14 @@
     background-attachment: fixed;
     background-size: cover;
     min-height: 500px;
-}
 
-.main-fondo__titulo--3 {
-    padding-top: 12rem;
-    color: rgb(168, 13, 13);
-    font-size: 45px;
-    text-align: center;
-    font-family: 'Fira Sans', sans-serif;
+    &__titulo {
+        padding-top: 12rem;
+        color: rgb(168, 13, 13);
+        font-size: 45px;
+        text-align: center;
+        font-family: $font-titulo;
+    }
 }
 
 .seccion {
@@ -25,18 +25,18 @@
     color: rgb(255, 255, 255);
     font-size: large;
     padding: 1.5rem;
-}
 
-.seccion__titulo {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: rgb(168, 13, 13);
-    padding: 1rem;
-
-}
-
-.seccion__descripcion {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 1rem;
+    &__titulo {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: $color-principal;
+        padding: 1rem;
+    
+    }
+    
+    &__descripcion {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 1rem;
+    }
 }
 
 .aside {
@@ -44,15 +44,16 @@
     color: rgb(255, 255, 255);
     font-size: small;
     padding: 1.5rem;
+
+    &__titulo {
+        background-color: rgba(0, 0, 0, 0.5);
+        font-style: italic;
+        padding: 1rem;
+    }
+     &__descripcion {
+         background-color: rgba(0, 0, 0, 0.5);
+         text-align: justify;
+         padding: 1rem;
+    }
 }
 
-.aside__titulo {
-    background-color: rgba(0, 0, 0, 0.5);
-    font-style: italic;
-    padding: 1rem;
-}
- .aside__descripcion {
-     background-color: rgba(0, 0, 0, 0.5);
-     text-align: justify;
-     padding: 1rem;
-}

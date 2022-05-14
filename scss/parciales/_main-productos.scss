@@ -10,14 +10,14 @@
     background-attachment: fixed;
     background-size: cover;
     min-height: 500px;
-}
 
-.main-fondo__titulo--4 {
-    padding-top: 12rem;
-    color: rgb(168, 13, 13);
-    font-size: 45px;
-    text-align: center;
-    font-family: 'Fira Sans', sans-serif;
+    &__titulo {
+        padding-top: 12rem;
+        color: $color-principal;
+        font-size: 45px;
+        text-align: center;
+        font-family: $font-titulo;
+    }
 }
 
 .producto {
@@ -29,41 +29,43 @@
     padding: 1.5rem;
     border-radius: 15px; 
     transition: 1s;
-}
 
-.producto:hover {
-    transform: scale(110%);
-}
+    &:hover {
+        transform: scale(110%);
+    }
 
-.producto__imagen {
-    width: 100%;
-    height: 100%;
-}
+    &__imagen {
+        width: 100%;
+        height: 100%;
+    }
+    
+    &__titulo {
+        color: rgb(0, 0, 0);
+        font-size: 150%;
+        align-self: flex-start;
+        padding-top: 1rem;
+    }
+    
+    &__descripcion {
+        color: rgb(0, 0, 0);
+        text-align: justify;
+        width: 100%;
+    }
+    
+    &__precio {
+        background-color: $color-principal;
+        color: rgb(0, 0, 0);
+        font-family: $font-precio;
+        padding: 5px 12px 5px 12px;
+        align-self: flex-end;
+    }
 
-.producto__titulo {
-    color: rgb(0, 0, 0);
-    font-size: 150%;
-    align-self: flex-start;
-    padding-top: 1rem;
+    
+    &__gradiente {
+        background: rgb(255,165,165);
+        background: linear-gradient(to bottom, rgba(255,165,165,1) 35%, rgba(244,235,235,1) 100%);
 }
-
-.producto__descripcion {
-    color: rgb(0, 0, 0);
-    text-align: justify;
-    width: 100%;
-}
-
-.producto__precio {
-    background-color: rgb(168, 13, 13);
-    color: rgb(0, 0, 0);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, cursive;
-    padding: 5px 12px 5px 12px;
-    align-self: flex-end;
-}
-
-.productos__gradiente {
-    background: rgb(255,165,165);
-    background: linear-gradient(to bottom, rgba(255,165,165,1) 35%, rgba(244,235,235,1) 100%);
+    
 }
 
 .botones-gradiente {
