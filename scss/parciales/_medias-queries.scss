@@ -200,9 +200,17 @@
     }
 }
 
-/* FOOTER QUERIE */
-
 @media screen and (max-width: 779px) {
+    
+    /*INICIO QUERIE*/
+
+    .video1 {
+        width: 100%;
+        height: auto;
+    }
+
+    /* FOOTER QUERIE */
+
     .footer {
         flex-direction: column;
         justify-content: flex-start;
@@ -263,9 +271,10 @@
     }
 }
 
-/*FAQ QUERIE*/
-
 @media screen and (max-width: 690px) {
+
+    /*FAQ QUERIE*/
+    
     .main-fondo5 {
         background-image: url(../imagenes/Facu-46.jpg);
         background-position-x: center;
