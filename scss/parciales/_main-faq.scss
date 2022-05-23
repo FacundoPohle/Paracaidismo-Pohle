@@ -26,10 +26,7 @@
 }
 
 .barra-busqueda {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flexbox (column);
     padding-top: 12rem;
     font-size: 350%;
     font-weight: bold;
@@ -44,18 +41,13 @@
 }
 
 .preguntas {
-    padding: 1rem;
-    display: flex;
-    flex-flow: row wrap; 
-    justify-content: space-around;
-    align-items: center;
+    @include flexbox (row, space-around);
+    flex-wrap: wrap; 
     align-content: space-between;
+    padding: 1rem;
 
     &__pregunta {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
+        @include flexbox (column, flex-start, flex-start);
         padding: 1.5rem;
         background-color: rgb(255, 255, 255);
         border-radius: 15px;
@@ -66,7 +58,7 @@
         }
     
         &--titulo {
-            align-self: center;
+            text-align: center;
             color: rgb(0, 0, 0);
             font-size: large;
             font-weight: bolder;

@@ -21,11 +21,7 @@
 }
 
 .producto {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    background-color: rgb(255, 255, 255); 
+    @include flexbox(column, center, flex-start);
     padding: 1.5rem;
     border-radius: 15px; 
     transition: 1s;
@@ -44,12 +40,14 @@
         font-size: 150%;
         align-self: flex-start;
         padding-top: 1rem;
+        font-weight: bold;
     }
     
     &__descripcion {
         color: rgb(0, 0, 0);
         text-align: justify;
         width: 100%;
+        font-weight: bold;
     }
     
     &__precio {

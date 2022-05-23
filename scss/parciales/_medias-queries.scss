@@ -3,7 +3,14 @@
 /*MEDIA QUERIE CODE*/
 /*MEDIA QUERIE CODE*/
 /*MEDIA QUERIE CODE*/
+@media screen and (max-width:1400px) {
+    
+/*FAQ QUERIE*/
 
+    .barra-icono {
+        display: none;
+    }
+}
 
 @media screen and (max-width:1300px) {
 
@@ -14,12 +21,8 @@
 
 /*NOSOTROS QUERIE*/
 
-    .aside__titulo {
-        font-size: medium;
-    }
-
     .aside__descripcion {
-        font-size: smaller;
+        font-size: medium;
     }
 
 /*PRODUCTOS QUERIE*/
@@ -37,13 +40,7 @@
     .producto:hover {
         transform: scale(100%);
     }
-
- /*FAQ QUERIE*/
-
-    .barra-icono {
-        display: none;
-    }
- }
+}
 
 @media screen and (max-width :1023px) {
 /* NAV QUERIE */
@@ -288,4 +285,3 @@
        text-align: center;
    }
 }
-

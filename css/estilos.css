@@ -11,6 +11,19 @@ a {
 ul li {
   list-style: none; }
 
+body {
+  scrollbar-color: #a80d0d;
+  scrollbar-width: none; }
+
+body::-webkit-scrollbar {
+  width: 8px;
+  background-color: black; }
+
+body::-webkit-scrollbar-thumb {
+  background-color: #a80d0d;
+  border-radius: 10px;
+  border-right: 4px solid rgba(255, 255, 255, 0.2); }
+
 /*HEADER CODE*/
 /*HEADER CODE*/
 /*HEADER CODE*/
@@ -214,7 +227,8 @@ body {
   border-radius: 15px;
   line-height: 2rem;
   background-color: rgba(0, 0, 0, 0.5);
-  color: white; }
+  color: white;
+  font-weight: bold; }
   .formulario__boton {
     background-color: white;
     color: black;
@@ -289,24 +303,60 @@ body {
   .seccion__titulo {
     background-color: rgba(0, 0, 0, 0.5);
     color: #a80d0d;
-    padding: 1rem; }
+    padding: 1rem;
+    font-weight: bold; }
   .seccion__descripcion {
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 1rem; }
+    padding: 1rem;
+    font-size: large;
+    font-weight: bold; }
+
+.seccion__carrusel {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex start;
+  gap: 1rem;
+  overflow: auto;
+  scrollbar-color: #a80d0d;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory; }
+  .seccion__carrusel::-webkit-scrollbar-track {
+    background-color: transparent; }
+  .seccion__carrusel::-webkit-scrollbar-thumb {
+    background-color: #a80d0d;
+    border-radius: 5px; }
+  .seccion__carrusel::-webkit-scrollbar {
+    width: 8px;
+    height: 8px; }
+  .seccion__carrusel--imagen {
+    background-color: grey;
+    width: 300px;
+    object-fit: cover;
+    height: 200px;
+    border-radius: 8px;
+    flex-shrink: 0;
+    scroll-snap-align: start; }
 
 .aside {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  font-size: small;
+  font-size: medium;
   padding: 1.5rem; }
   .aside__titulo {
     background-color: rgba(0, 0, 0, 0.5);
     font-style: italic;
-    padding: 1rem; }
+    padding: 1rem 0rem 1rem 0rem;
+    text-align: center;
+    font-weight: bold; }
   .aside__descripcion {
     background-color: rgba(0, 0, 0, 0.5);
     text-align: justify;
-    padding: 1rem; }
+    padding: 1rem;
+    font-weight: bold; }
+  .aside__imagen {
+    object-fit: cover;
+    width: 100%; }
 
 /*MAIN PRODUCTOS CODE*/
 /*MAIN PRODUCTOS CODE*/
@@ -330,7 +380,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-color: white;
   padding: 1.5rem;
   border-radius: 15px;
   transition: 1s; }
@@ -343,11 +392,13 @@ body {
     color: black;
     font-size: 150%;
     align-self: flex-start;
-    padding-top: 1rem; }
+    padding-top: 1rem;
+    font-weight: bold; }
   .producto__descripcion {
     color: black;
     text-align: justify;
-    width: 100%; }
+    width: 100%;
+    font-weight: bold; }
   .producto__precio {
     background-color: #a80d0d;
     color: black;
@@ -403,12 +454,13 @@ body {
   border-radius: 15px; }
 
 .preguntas {
-  padding: 1rem;
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  align-content: space-between; }
+  flex-wrap: wrap;
+  align-content: space-between;
+  padding: 1rem; }
   .preguntas__pregunta {
     display: flex;
     flex-direction: column;
@@ -421,7 +473,7 @@ body {
     .preguntas__pregunta:hover {
       transform: scale(120%); }
     .preguntas__pregunta--titulo {
-      align-self: center;
+      text-align: center;
       color: black;
       font-size: large;
       font-weight: bolder; }
@@ -496,15 +548,18 @@ body {
 /*MEDIA QUERIE CODE*/
 /*MEDIA QUERIE CODE*/
 /*MEDIA QUERIE CODE*/
+@media screen and (max-width: 1400px) {
+  /*FAQ QUERIE*/
+  .barra-icono {
+    display: none; } }
+
 @media screen and (max-width: 1300px) {
   .formulario {
     margin: 2rem 0.5rem 2rem 0.5rem;
     padding: 1rem; }
   /*NOSOTROS QUERIE*/
-  .aside__titulo {
-    font-size: medium; }
   .aside__descripcion {
-    font-size: smaller; }
+    font-size: medium; }
   /*PRODUCTOS QUERIE*/
   .main-fondo4 {
     background-image: url(../imagenes/Facu-46.jpg);
@@ -513,10 +568,7 @@ body {
       font-size: xx-large;
       color: white; }
   .producto:hover {
-    transform: scale(100%); }
-  /*FAQ QUERIE*/
-  .barra-icono {
-    display: none; } }
+    transform: scale(100%); } }
 
 @media screen and (max-width: 1023px) {
   /* NAV QUERIE */
