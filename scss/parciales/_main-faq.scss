@@ -16,7 +16,6 @@
 }
 .barra-icono {
     transform: scale(50%);
-    background-color: rgba(0, 0, 0, 0.5);
     color: rgb(0, 0, 0);
     position: absolute;
     top: 18.7rem;
@@ -72,7 +71,12 @@
     }
     
     &__gradiente {
+        @extend .preguntas__pregunta;
         background: rgb(255,165,165);
         background: linear-gradient(to bottom, rgba(255,165,165,1) 35%, rgba(244,235,235,1) 100%);
+
+        &:hover {
+            transform: scale(120%);
+        }
     }
 }

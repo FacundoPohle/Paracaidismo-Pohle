@@ -4,20 +4,11 @@
 /*HEADER CODE*/
 /*HEADER CODE*/
 
-
-body {
-    background-color: rgb(255, 255, 255);
-    font-family: $font-body;
-}
-
 .header {
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    @include flexbox (row, flex-start);
     background-color: rgb(30, 40, 36);
     padding: 1rem;
     width: 100%;
@@ -52,9 +43,7 @@ body {
     padding-right: 2rem;
 
     &__lista {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
+        @include flexbox (row, flex-start);
         list-style-type: none;
         font-weight: bold;
         font-size: 120%;

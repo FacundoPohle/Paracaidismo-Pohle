@@ -12,6 +12,8 @@ ul li {
   list-style: none; }
 
 body {
+  color: white;
+  font-family: "Anek Odia", sans-serif;
   scrollbar-color: #a80d0d;
   scrollbar-width: none; }
 
@@ -29,10 +31,6 @@ body::-webkit-scrollbar-thumb {
 /*HEADER CODE*/
 /*HEADER CODE*/
 /*HEADER CODE*/
-body {
-  background-color: white;
-  font-family: "Anek Odia", sans-serif; }
-
 .header {
   position: fixed;
   top: 0;
@@ -68,6 +66,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    align-items: center;
     list-style-type: none;
     font-weight: bold;
     font-size: 120%;
@@ -262,10 +261,19 @@ body {
 .font {
   font-family: "Koulen", cursive; }
 
+.relative {
+  position: relative;
+  padding-top: 56.25%;
+  margin-bottom: 5rem; }
+
 .video {
+  position: absolute;
+  top: 0;
+  left: 0;
   margin-top: 4rem;
   border: 4px solid black;
-  object-fit: cover; }
+  width: 100%;
+  height: 100%; }
 
 .carrusel {
   border: 4px solid black; }
@@ -303,40 +311,39 @@ body {
   .seccion__titulo {
     background-color: rgba(0, 0, 0, 0.5);
     color: #a80d0d;
-    padding: 1rem;
+    padding: 2rem;
     font-weight: bold; }
   .seccion__descripcion {
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 1rem;
+    padding: 2rem;
     font-size: large;
     font-weight: bold; }
-
-.seccion__carrusel {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex start;
-  gap: 1rem;
-  overflow: auto;
-  scrollbar-color: #a80d0d;
-  scrollbar-width: none;
-  scroll-snap-type: x mandatory; }
-  .seccion__carrusel::-webkit-scrollbar-track {
-    background-color: transparent; }
-  .seccion__carrusel::-webkit-scrollbar-thumb {
-    background-color: #a80d0d;
-    border-radius: 5px; }
-  .seccion__carrusel::-webkit-scrollbar {
-    width: 8px;
-    height: 8px; }
-  .seccion__carrusel--imagen {
-    background-color: grey;
-    width: 300px;
-    object-fit: cover;
-    height: 200px;
-    border-radius: 8px;
-    flex-shrink: 0;
-    scroll-snap-align: start; }
+  .seccion__carrusel {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex start;
+    gap: 1rem;
+    overflow: auto;
+    scrollbar-color: #a80d0d;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory; }
+    .seccion__carrusel::-webkit-scrollbar-track {
+      background-color: transparent; }
+    .seccion__carrusel::-webkit-scrollbar-thumb {
+      background-color: #a80d0d;
+      border-radius: 5px; }
+    .seccion__carrusel::-webkit-scrollbar {
+      width: 8px;
+      height: 8px; }
+    .seccion__carrusel--imagen {
+      background-color: grey;
+      width: 300px;
+      object-fit: cover;
+      height: 200px;
+      border-radius: 8px;
+      flex-shrink: 0;
+      scroll-snap-align: start; }
 
 .aside {
   background-color: rgba(0, 0, 0, 0.5);
@@ -429,7 +436,6 @@ body {
 
 .barra-icono {
   transform: scale(50%);
-  background-color: rgba(0, 0, 0, 0.5);
   color: black;
   position: absolute;
   top: 18.7rem;
@@ -461,7 +467,7 @@ body {
   flex-wrap: wrap;
   align-content: space-between;
   padding: 1rem; }
-  .preguntas__pregunta {
+  .preguntas__pregunta, .preguntas__gradiente {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -470,7 +476,7 @@ body {
     background-color: white;
     border-radius: 15px;
     transition: 1s; }
-    .preguntas__pregunta:hover {
+    .preguntas__pregunta:hover, .preguntas__gradiente:hover {
       transform: scale(120%); }
     .preguntas__pregunta--titulo {
       text-align: center;
@@ -484,6 +490,8 @@ body {
   .preguntas__gradiente {
     background: #ffa5a5;
     background: linear-gradient(to bottom, #ffa5a5 35%, #f4ebeb 100%); }
+    .preguntas__gradiente:hover {
+      transform: scale(120%); }
 
 .animacion {
   animation-name: coder;
@@ -612,7 +620,7 @@ body {
   #lateral {
     display: block;
     background-color: rgba(0, 0, 0, 0.9);
-    width: 73%;
+    width: 65%;
     height: 100vh;
     position: fixed;
     top: 0%;

@@ -29,51 +29,52 @@
     &__titulo {
         background-color: rgba(0, 0, 0, 0.5);
         color: $color-principal;
-        padding: 1rem;
+        padding: 2rem;
         font-weight: bold;
     
     }
     
     &__descripcion {
         background-color: rgba(0, 0, 0, 0.5);
-        padding: 1rem;
+        padding: 2rem;
         font-size: large;
         font-weight: bold
     }
+    &__carrusel {
+        @include flexbox(row,flex-start ,flex start);
+        gap: 1rem;
+        overflow: auto;
+        scrollbar-color: $color-principal;
+        scrollbar-width: none;
+        scroll-snap-type: x mandatory;
+    
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background-color: $color-principal;
+            border-radius: 5px;
+        }
+        
+        &::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+    
+        &--imagen {
+            background-color: grey;
+            width: 300px;
+            object-fit: cover;
+            height: 200px;
+            border-radius: 8px;
+            flex-shrink: 0;
+            scroll-snap-align: start;
+        }
+    }
 }
 
-.seccion__carrusel {
-    @include flexbox(row,flex-start ,flex start);
-    gap: 1rem;
-    overflow: auto;
-    scrollbar-color: $color-principal;
-    scrollbar-width: none;
-    scroll-snap-type: x mandatory;
 
-    &::-webkit-scrollbar-track {
-        background-color: transparent;
-    }
-    
-    &::-webkit-scrollbar-thumb {
-        background-color: $color-principal;
-        border-radius: 5px;
-    }
-    
-    &::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
-    }
-
-    &--imagen {
-        background-color: grey;
-        width: 300px;
-        object-fit: cover;
-        height: 200px;
-        border-radius: 8px;
-        flex-shrink: 0;
-        scroll-snap-align: start;
-    }
-}
 
 .aside {
     background-color: rgba(0, 0, 0, 0.5);
