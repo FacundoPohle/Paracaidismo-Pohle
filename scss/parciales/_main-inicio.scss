@@ -4,46 +4,43 @@
 /*MAIN INICIO CODE*/
 /*MAIN INICIO CODE*/
 
-
-.main-fondo {
-    background-image: url(../imagenes/Facu-26.jpg);
+.seccion-fondo--2 {
+    background-image: url(../../imagenes/aconcagua20162.png);
     background-attachment: fixed;
     background-size: cover;
     width: 100%;
-    min-height: 650px;
+    height: 400px;
 
   &__titulo {
-      text-align: center;
       color: $color-principal;
       font-size: 60px;
-      font-family: $font-titulo;
-      margin-top: 2rem;
-  }
-  
-  &__subtitulo {
-      background-color: rgba( 0 , 0, 0, 0.2);
-      color: rgb(255, 255, 255);
-      font-weight: bolder;
-      font-style: oblique;
+      font-family: $fontbclackopsone;
+      padding-top: 7rem;
+      padding-bottom: 1rem;
       text-align: center;
-      padding: 1rem;  
+      width: 100%;
   }
   
   &__boton {
       background-color: $color-principal;
       color: rgb(255, 255, 255);
-      font-family: $font-boton;
+      font-family: $fontbclackopsone;
       font-size: larger;
       padding: 10px 12px 10px 12px;
       margin-top: 1rem;
       margin-bottom: 2rem;
   }
+
+  &__row {
+      min-height: 400px;
+  }
+}
+
+.espaciado {
+    margin-top: 25rem;
 }
 
 .centrado {
     text-align: center;
 }
 
-.espaciado {
-    margin-top: 25rem;
-}

@@ -5,37 +5,38 @@
 /*FOOTER CODE*/
 
 .footer {
-    @include flexbox (row, flex-start, flex-start);
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     width: 100%;
-    min-height: 250px;
+    min-height: 260px;
+
+    &__logo {
+        @include flexbox (column);
+    }
 
     &__image {
-        margin: 1.5rem 0rem 0rem 1rem;
+        margin-top: 1.5rem;
         width: 60px;
         height: 60px;
     }
+
+    &__row {
+        min-height: 200;
+    }
     
     &__suscripcion {
-        display: flex;
-        flex-direction: column;
+        @include flexbox (column, center, flex-start);
         padding: 1.5rem;
-    
     }
     
     &__sugerencia {
         font-size: 90%;
     }
     
-    &__email {
-        padding-right: 1.5rem;
-    }
-    
     &__boton {
         background-color: $color-principal;
         color: rgb(255, 255, 255);
-        font-family: $font-boton;
+        font-family: $fontbclackopsone;
         padding: 5px 12px 5px 12px;
         transition: 1s;
     
@@ -44,10 +45,15 @@
         }
     }
     
-    &__contacto {
-        position: absolute;
-        right: 1.5rem;
+    &__datos {
         @include flexbox (column);
+        padding: 1.5rem;
+        justify-content: space-around;
+    }
+
+    &__contacto {
+        @include flexbox (column, center, flex-end);
+        padding: 1.5rem 3rem 1.5rem 3rem;
     
         &--sugerencia {
             margin: 1rem; 
@@ -57,8 +63,7 @@
 
     &__redes {
         @include flexbox (row);
-        margin-top: 1.5rem;
-        gap: 50px;
+        gap: 40px;
         order: -1;
     
         &--red-social {
@@ -88,7 +93,7 @@
     }
 
     &__map {
-        width: map-get($map: $estilos, $key: 340px);
+        width: map-get($map: $estilos, $key: 300px);
         height: map-get($map: $estilos, $key: 110px);
     }
 }

@@ -4,42 +4,51 @@
 /*MAIN NOSOTROS CODE*/
 /*MAIN NOSOTROS CODE*/
 
-
-.main-fondo3 {
-    background-image: url(../imagenes/Facu-26.jpg);
+.seccion-fondo3--2 {
+    background-image: url(../../imagenes/aconcagua20162.png);
     background-attachment: fixed;
     background-size: cover;
-    min-height: 500px;
-
-    &__titulo {
-        padding-top: 12rem;
-        color: rgb(168, 13, 13);
-        font-size: 45px;
-        text-align: center;
-        font-family: $font-titulo;
-    }
-}
-
-.seccion {
-    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
     color: rgb(255, 255, 255);
     font-size: large;
-    padding: 1.5rem;
+    padding-top: 4rem;
+
+    &__row {
+        min-height: 705px;
+    }
 
     &__titulo {
         background-color: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        font-size: 50px;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    &__subtitulo {
+        background-color: rgb(0, 0, 0);
         color: $color-principal;
         padding: 2rem;
         font-weight: bold;
-    
+        box-shadow: 0px 0px 30px 6px rgb(0, 0, 0);
     }
     
     &__descripcion {
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 2rem;
+        background-color: rgba(243, 243, 243, 0.3);
+        color: rgb(0, 0, 0);
+        padding: 2rem 2rem 5rem 2rem;
+        margin-top: 2rem;
         font-size: large;
-        font-weight: bold
+        font-weight: bold;
+        box-shadow: 0px 0px 30px 6px rgb(0, 0, 0);
+        transition: 1s;
     }
+
+    .seccion-fondo3--2__descripcion:hover {
+        background-color: rgba(0, 0, 0, 0.6);
+        color: rgb(255, 255, 255);
+    }
+
     &__carrusel {
         @include flexbox(row,flex-start ,flex start);
         gap: 1rem;
@@ -77,20 +86,19 @@
 
 
 .aside {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    color: $color-principal;
     font-size: medium;
     padding: 1.5rem;
+    box-shadow: 0px 0px 30px 6px rgb(0, 0, 0);
 
     &__titulo {
-        background-color: rgba(0, 0, 0, 0.5);
         font-style: italic;
         padding: 1rem 0rem 1rem 0rem;
         text-align: center;
         font-weight: bold;
     }
      &__descripcion {
-         background-color: rgba(0, 0, 0, 0.5);
          text-align: justify;
          padding: 1rem;
          font-weight: bold;

@@ -9,10 +9,12 @@
     top: 0;
     left: 0;
     @include flexbox (row, flex-start);
-    background-color: rgb(30, 40, 36);
+    background-color: rgba(0 , 0, 0, 0.7);
     padding: 1rem;
     width: 100%;
     z-index: 10;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter:blur(15px);
 
     &__open {
         display: none;
@@ -53,7 +55,7 @@
     &__item{
         padding-left: 1.5rem;
         margin-left: 30px;
-        border-left: solid $color-principal;
+        border-left: solid rgb(255, 255, 255);
         transition: 0.5s;
 
         &:hover {
@@ -80,7 +82,7 @@
         text-decoration: none;
 
         &:hover {
-            color: $color-principal;
+            color: rgb(255, 255, 255);
         }
     }
     

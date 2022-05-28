@@ -1,4 +1,4 @@
-$color-principal: rgb(168, 13, 13);
+$color-principal: crimson;
 
 $font-body: 'Anek Odia', sans-serif;
 
@@ -20,6 +20,16 @@ $font-precio: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, cursi
 }
 
 $estilos: (
-        340px: 340px,
+        340px: 300px,
         110px: 110px    
     );
+
+// FUENTES NUEVAS QUE ESTAN PIOLA
+
+$fontalumni: 'Alumni Sans Inline One', cursive;
+
+$fontstardos: 'Stardos Stencil', cursive;
+
+$fontbclackopsone: 'Black Ops One', cursive;
+
+$fontrubik: 'Rubik Glitch', cursive;
