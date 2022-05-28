@@ -308,7 +308,7 @@ body::-webkit-scrollbar-thumb {
 
 .foto {
   border-top: 95px solid black;
-  background-image: url(../../imagenes/prueba.jpg);
+  background-image: url(../imagenes/prueba.jpg);
   background-size: cover;
   margin-top: 5rem; }
 
