@@ -171,7 +171,7 @@ body::-webkit-scrollbar-thumb {
     height: 110px; }
 
 .seccion-fondo {
-  background-image: url(../imagenes/facu-16.jpg);
+  background-image: url(../imagenes/Facu-16.jpg);
   background-size: cover;
   width: 100%;
   min-height: 88vh;
@@ -236,7 +236,7 @@ body::-webkit-scrollbar-thumb {
 /*MAIN INICIO CODE*/
 /*MAIN INICIO CODE*/
 .seccion-fondo--2 {
-  background-image: url(../imagenes/aconcagua20162.png);
+  background-image: url(../imagenes/Aconcagua20162.png);
   background-attachment: fixed;
   background-size: cover;
   width: 100%;
@@ -245,8 +245,7 @@ body::-webkit-scrollbar-thumb {
     color: crimson;
     font-size: 60px;
     font-family: "Black Ops One", cursive;
-    padding-top: 7rem;
-    padding-bottom: 1rem;
+    padding: 7rem 0rem 1rem 0rem;
     text-align: center;
     width: 100%; }
   .seccion-fondo--2__boton {
@@ -272,7 +271,7 @@ body::-webkit-scrollbar-thumb {
 /*MAIN RESERVAS CODE*/
 /*MAIN RESERVAS CODE*/
 .seccion-fondo2--2 {
-  background-image: url(../imagenes/aconcagua20162.png);
+  background-image: url(../imagenes/Aconcagua20162.png);
   background-attachment: fixed;
   background-size: cover;
   width: 100%;
@@ -366,7 +365,7 @@ body::-webkit-scrollbar-thumb {
 /*MAIN NOSOTROS CODE*/
 /*MAIN NOSOTROS CODE*/
 .seccion-fondo3--2 {
-  background-image: url(../imagenes/aconcagua20162.png);
+  background-image: url(../imagenes/Aconcagua20162.png);
   background-attachment: fixed;
   background-size: cover;
   width: 100%;
@@ -514,7 +513,7 @@ body::-webkit-scrollbar-thumb {
 /*MAIN FAQ CODE*/
 /*MAIN FAQ CODE*/
 .seccion-fondo4--2 {
-  background-image: url(../imagenes/aconcagua20162.png);
+  background-image: url(../imagenes/Aconcagua20162.png);
   background-attachment: fixed;
   background-size: cover;
   width: 100%;
