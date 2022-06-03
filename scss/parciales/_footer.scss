@@ -6,9 +6,15 @@
 
 .footer {
     background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+    color: $color-secundario;
     width: 100%;
     min-height: 260px;
+
+    &__jam {
+        margin-right: 10px;
+        display: inline;
+        font-size: 20px;
+    }
 
     &__logo {
         @include flexbox (column);
@@ -21,7 +27,7 @@
     }
 
     &__row {
-        min-height: 200;
+        min-height: 200px;
     }
     
     &__suscripcion {
@@ -35,10 +41,11 @@
     
     &__boton {
         background-color: $color-principal;
-        color: rgb(255, 255, 255);
+        color: $color-secundario;
         font-family: $fontbclackopsone;
         padding: 5px 12px 5px 12px;
         transition: 1s;
+        margin-left: 1rem;
     
         &:hover {
             transform: scale(120%);
@@ -93,8 +100,8 @@
     }
 
     &__map {
-        width: map-get($map: $estilos, $key: 300px);
-        height: map-get($map: $estilos, $key: 110px);
+        width: map-get($map: $estilos, $key: ancho);
+        height: map-get($map: $estilos, $key: alto);
     }
 }
 

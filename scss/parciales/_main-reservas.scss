@@ -4,24 +4,6 @@
 /*MAIN RESERVAS CODE*/
 /*MAIN RESERVAS CODE*/
 
-.seccion-fondo2--2 {
-    background-image: url(../imagenes/Aconcagua20162.png);
-    background-attachment: fixed;
-    background-size: cover;
-    width: 100%;
-    font-size: large;
-    padding-top: 5rem;
-
-    &__titulo {
-        color: rgb(255, 255, 255);
-        background-color: rgba(0, 0, 0, 0.5);
-        text-align: center;
-        font-size: 50px;
-        width: 100%;
-        padding: 1rem;
-    }
-}
-
 .formulario {
     margin-top: 4rem;
     margin-bottom: 2rem;
@@ -30,7 +12,7 @@
     border-radius: 30px;
     line-height: 2rem;
     background-color: rgba(0,0,0,0.5);
-    color: rgb(255, 255, 255);
+    color: $color-secundario;
     font-weight: bold;
 
     &__boton {
@@ -43,6 +25,10 @@
         backdrop-filter:blur(15px);
         border-radius: 4px;
     }
+}
+
+::placeholder {
+color: rgb(0, 0, 0);
 }
 
 .foto {
@@ -61,13 +47,13 @@
     }
     
     &__titulo {
-        color: crimson;
+        color: $color-principal;
         background-color: rgb(0, 0, 0);
         font-family: $fontrubik;
 
         &--2 {
             font-family: $fontrubik;
-            color: crimson;
+            color: $color-principal;
         }
     }
     
@@ -109,7 +95,7 @@
 }
 
 .accordion-button:not(.collapsed) {
-    color: crimson;
+    color: $color-principal;
     background-color: rgb(0, 0, 0);
 }
 

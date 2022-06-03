@@ -4,7 +4,7 @@
 /*MAIN INICIO CODE*/
 /*MAIN INICIO CODE*/
 
-.seccion-fondo--2 {
+.inicio {
     background-image: url(../imagenes/Aconcagua20162.png);
     background-attachment: fixed;
     background-size: cover;
@@ -22,7 +22,7 @@
   
   &__boton {
       background-color: $color-principal;
-      color: rgb(255, 255, 255);
+      color: $color-secundario;
       font-family: $fontbclackopsone;
       font-size: larger;
       padding: 10px 12px 10px 12px;

@@ -36,16 +36,6 @@
 
 /*PRODUCTOS QUERIE*/
 
-    .main-fondo4 {
-        background-image: url(../imagenes/Facu-46.jpg);
-        background-position-x: center;
-
-        &__titulo {
-            font-size: xx-large;
-            color: rgb(255, 255, 255);
-        }
-    }
-
     .producto:hover {
         transform: scale(100%);
     }
@@ -131,23 +121,21 @@
 /*INICIO QUERIE*/
 
     .seccion-fondo {
-        background-image: url(../imagenes/4.jpg);
+        background-image: url(../imagenes/foto-publi-48.png);
         background-position-x: center;
 
         &__subtitulo {
-            color: rgb(255, 255, 255);
             text-align: center;
             width: 100%;
             padding: 1rem;
-            margin-bottom: 2rem;
+            margin-bottom: 2.8rem;
         }
     }    
 
-    .seccion-fondo--2 {
+    .inicio {
 
         &__titulo {
-            font-size: xx-large;
-            color: rgb(255, 255, 255);
+            font-size: 35px;
             text-align: center;
             padding-bottom: 1.5rem;
         }
@@ -215,7 +203,6 @@
 
     &__map {
         width: 280px;
-        height: 80px;
     }
     
     &__contacto {
@@ -229,6 +216,7 @@
     }
 
     &__datos {
+        height: 300px;
         font-size: small;
     }
 
@@ -245,6 +233,10 @@
     .footer__contacto {
         @include flexbox (column);
         padding-top: 0;
+    }
+
+    .footer__map {
+        height: 400px;
     }
 }
 
@@ -265,6 +257,8 @@
         }
     }
 
+    /*PAGINAS QUERIE*/
+   
     .seccion-fondo2 {
         min-height: 80vh;
 
@@ -296,11 +290,6 @@
     }
 
     /*FAQ QUERIE*/
-    
-    .main-fondo5 {
-        background-image: url(../imagenes/Facu-46.jpg);
-        background-position-x: center;
-    }
 
    .barra-busqueda {
        font-size: 200%;
@@ -320,7 +309,23 @@
        &__row {
            min-height: 75vh;
        }
+       
+       &__subtitulo {
+           color: $color-secundario;
+           font-size: 35px;
+
+           &:hover {
+               display: none;
+           }
+        
+       }
+       &__jam {
+           font-size: 40px;
+           left: 46%;
+       }
    }
+
+   /*PAGINAS QUERIE*/
 
    .seccion-fondo2 {
     min-height: 75vh;

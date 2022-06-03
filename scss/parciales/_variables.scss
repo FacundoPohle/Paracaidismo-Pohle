@@ -1,5 +1,7 @@
 $color-principal: crimson;
 
+$color-secundario: rgb(255, 255, 255);
+
 $font-body: 'Anek Odia', sans-serif;
 
 $font-boton:  'Rubik Microbe', cursive;
@@ -20,8 +22,8 @@ $font-precio: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, cursi
 }
 
 $estilos: (
-        340px: 300px,
-        110px: 110px    
+        ancho: 320px,
+        alto: 240px    
     );
 
 // FUENTES NUEVAS QUE ESTAN PIOLA
