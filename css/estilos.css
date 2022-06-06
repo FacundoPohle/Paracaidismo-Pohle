@@ -213,7 +213,7 @@ body::-webkit-scrollbar-thumb {
     .separador__frase:hover {
       color: crimson; }
 
-.seccion-fondo2, .seccion-fondo2--1 {
+.seccion-fondo2, .seccion-fondo2--1, .seccion-fondo2--2, .seccion-fondo2--3 {
   background-image: url(../imagenes/1a.svg);
   background-size: cover;
   width: 100%;
@@ -227,18 +227,24 @@ body::-webkit-scrollbar-thumb {
     font-family: "Black Ops One", cursive; }
   .seccion-fondo2__row {
     min-height: 88vh; }
-  .seccion-fondo2__jam, .seccion-fondo2--1__jam {
+  .seccion-fondo2__jam {
     font-size: 40px;
     color: crimson;
     position: absolute;
-    bottom: 0;
+    bottom: 1rem;
     left: 48%; }
 
 .seccion-fondo2--1 {
+  background-image: url(../imagenes/2b.svg); }
+
+.seccion-fondo2--2 {
+  background-image: url(../imagenes/1b.svg); }
+
+.seccion-fondo2--3 {
   background-image: url(../imagenes/2a.svg); }
 
 .aconcagua {
-  background-image: url(../imagenes/Aconcagua20162.png);
+  background-image: url(../imagenes/Aconcagua2016.jpg);
   background-attachment: fixed;
   background-size: cover;
   width: 100%;
@@ -258,7 +264,7 @@ body::-webkit-scrollbar-thumb {
 /*MAIN INICIO CODE*/
 /*MAIN INICIO CODE*/
 .inicio {
-  background-image: url(../imagenes/Aconcagua20162.png);
+  background-image: url(../imagenes/Aconcagua2016.jpg);
   background-attachment: fixed;
   background-size: cover;
   width: 100%;
@@ -293,33 +299,46 @@ body::-webkit-scrollbar-thumb {
 /*MAIN RESERVAS CODE*/
 /*MAIN RESERVAS CODE*/
 .formulario {
-  margin-top: 4rem;
-  margin-bottom: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 4rem;
   padding: 2rem;
-  border: 4px solid red;
   border-radius: 30px;
   line-height: 2rem;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  font-weight: bold; }
+  background-color: white;
+  color: black;
+  font-family: "Black Ops One", cursive; }
   .formulario__boton {
-    background-color: rgba(243, 243, 243, 0.5);
+    background-color: white;
     color: black;
     font-family: "Black Ops One", cursive;
     padding: 5px 12px 5px 12px;
     width: 100%;
-    -webkit-backdrop-filter: blur(15px);
-    backdrop-filter: blur(15px);
-    border-radius: 4px; }
+    border: 2px solid black;
+    border-radius: 4px;
+    margin-bottom: 1rem; }
+  .formulario__boton--2 {
+    background-color: crimson;
+    color: white;
+    font-family: "Black Ops One", cursive;
+    padding: 5px 12px 5px 12px;
+    transition: 1s; }
+    .formulario__boton--2:hover {
+      transform: scale(120%); }
 
 ::placeholder {
   color: black; }
 
-.foto {
-  border-top: 95px solid black;
-  background-image: url(../imagenes/prueba.jpg);
-  background-size: cover;
+.fondo {
+  background-color: white;
   margin-top: 5rem; }
+
+.fondo--1 {
+  background-color: black; }
+
+.fondo--2 {
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px); }
 
 .servicio {
   background-color: rgba(0, 0, 0, 0.5); }
@@ -344,22 +363,26 @@ body::-webkit-scrollbar-thumb {
 
 .relative {
   position: relative;
-  padding-top: 56.25%;
-  margin-bottom: 5rem; }
+  padding-top: 56.25%; }
 
 .video {
   position: absolute;
   top: 0;
   left: 0;
-  margin-top: 4rem;
-  border: 6px solid black;
   width: 100%;
-  height: 100%;
-  border-radius: 30px; }
+  height: 100%; }
+  .video__parrafo {
+    font-style: italic;
+    font-family: "Black Ops One", cursive;
+    font-size: 25px;
+    margin-top: 4rem; }
 
-.carrusel {
-  border: 6px solid black;
-  border-radius: 30px; }
+.carrusel__parrafo {
+  margin-top: 5rem;
+  color: white;
+  font-family: "Black Ops One", cursive;
+  font-size: 25px;
+  text-align: right; }
 
 .accordion-button:not(.collapsed) {
   color: crimson;
@@ -369,79 +392,97 @@ body::-webkit-scrollbar-thumb {
   border-color: crimson;
   box-shadow: crimson; }
 
-/*MAIN NOSOTROS CODE*/
-/*MAIN NOSOTROS CODE*/
-/*MAIN NOSOTROS CODE*/
-/*MAIN NOSOTROS CODE*/
-/*MAIN NOSOTROS CODE*/
-.seccion-fondo3--2 {
-  background-image: url(../imagenes/Aconcagua20162.png);
-  background-attachment: fixed;
-  background-size: cover;
-  width: 100%;
-  color: white;
-  font-size: large;
-  padding-top: 4rem; }
-  .seccion-fondo3--2__row {
-    min-height: 705px; }
-  .seccion-fondo3--2__titulo {
-    background-color: rgba(0, 0, 0, 0.5);
-    text-align: center;
-    font-size: 50px;
-    width: 100%;
-    padding: 1rem; }
-  .seccion-fondo3--2__subtitulo {
+.fila {
+  padding: 5rem 0rem 5rem 0rem; }
+
+.reservas {
+  margin-top: 5rem;
+  border: 2px solid black; }
+  .reservas__titulo {
+    padding: 1rem;
     background-color: black;
+    font-family: "Black Ops One", cursive;
     color: crimson;
-    padding: 2rem;
-    margin-right: 1rem;
-    font-weight: bold;
-    box-shadow: 0px 0px 30px 6px black; }
-  .seccion-fondo3--2__descripcion {
-    background-color: rgba(243, 243, 243, 0.3);
-    -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px);
-    color: black;
-    padding: 2rem 2rem 5rem 2rem;
-    margin-top: 2rem;
-    margin-right: 1rem;
-    font-size: large;
-    font-weight: bold;
-    box-shadow: 0px 0px 30px 6px black;
-    transition: 1s; }
-  .seccion-fondo3--2 .seccion-fondo3--2__descripcion:hover {
+    margin-bottom: 0rem; }
+  .reservas__subtitulo {
+    color: crimson; }
+  .reservas__descripcion {
+    background-color: white;
+    text-align: justify;
+    padding: 1.5rem;
+    margin-bottom: 0rem; }
+
+/*MAIN NOSOTROS CODE*/
+/*MAIN NOSOTROS CODE*/
+/*MAIN NOSOTROS CODE*/
+/*MAIN NOSOTROS CODE*/
+/*MAIN NOSOTROS CODE*/
+.nosotros__row {
+  min-height: 705px; }
+
+.nosotros__titulo {
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-size: 50px;
+  width: 100%;
+  padding: 1rem; }
+
+.nosotros__subtitulo {
+  text-align: justify;
+  background-color: black;
+  color: white;
+  padding: 2rem;
+  margin-right: 1rem;
+  font-weight: bold;
+  box-shadow: 0px 0px 30px 6px black; }
+
+.nosotros__descripcion {
+  text-align: justify;
+  background-color: rgba(243, 243, 243, 0.3);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  color: black;
+  padding: 2rem 2rem 5rem 2rem;
+  margin-top: 2rem;
+  margin-right: 1rem;
+  font-size: large;
+  font-weight: bold;
+  box-shadow: 0px 0px 30px 6px black;
+  transition: 1s; }
+  .nosotros__descripcion:hover {
     background-color: rgba(0, 0, 0, 0.8);
     color: white; }
-  .seccion-fondo3--2__carrusel {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex start;
-    gap: 1rem;
-    overflow: auto;
-    scrollbar-color: crimson;
-    scrollbar-width: none;
-    scroll-snap-type: x mandatory; }
-    .seccion-fondo3--2__carrusel::-webkit-scrollbar-track {
-      background-color: transparent; }
-    .seccion-fondo3--2__carrusel::-webkit-scrollbar-thumb {
-      background-color: crimson;
-      border-radius: 5px; }
-    .seccion-fondo3--2__carrusel::-webkit-scrollbar {
-      width: 8px;
-      height: 8px; }
-    .seccion-fondo3--2__carrusel--imagen {
-      background-color: grey;
-      width: 300px;
-      object-fit: cover;
-      height: 200px;
-      border-radius: 8px;
-      flex-shrink: 0;
-      scroll-snap-align: start; }
+
+.nosotros__carrusel {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex start;
+  gap: 1rem;
+  overflow: auto;
+  scrollbar-color: crimson;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory; }
+  .nosotros__carrusel::-webkit-scrollbar-track {
+    background-color: transparent; }
+  .nosotros__carrusel::-webkit-scrollbar-thumb {
+    background-color: crimson;
+    border-radius: 5px; }
+  .nosotros__carrusel::-webkit-scrollbar {
+    width: 8px;
+    height: 8px; }
+  .nosotros__carrusel--imagen {
+    background-color: grey;
+    width: 300px;
+    object-fit: cover;
+    height: 200px;
+    border-radius: 8px;
+    flex-shrink: 0;
+    scroll-snap-align: start; }
 
 .aside {
   background-color: black;
-  color: crimson;
+  color: white;
   font-size: medium;
   padding: 1.5rem;
   box-shadow: 0px 0px 30px 6px black; }
@@ -463,21 +504,6 @@ body::-webkit-scrollbar-thumb {
 /*MAIN PRODUCTOS CODE*/
 /*MAIN PRODUCTOS CODE*/
 /*MAIN PRODUCTOS CODE*/
-.seccion-fondo4--2 {
-  background-image: url(../imagenes/Aconcagua20162.png);
-  background-attachment: fixed;
-  background-size: cover;
-  width: 100%;
-  color: white;
-  font-size: large;
-  padding-top: 5rem; }
-  .seccion-fondo4--2__titulo {
-    background-color: rgba(0, 0, 0, 0.5);
-    text-align: center;
-    font-size: 50px;
-    width: 100%;
-    padding: 1rem; }
-
 .borroso {
   background-color: rgba(244, 235, 235, 0.2);
   -webkit-backdrop-filter: blur(15px);
@@ -527,11 +553,6 @@ body::-webkit-scrollbar-thumb {
 /*MAIN FAQ CODE*/
 /*MAIN FAQ CODE*/
 .seccion-fondo4--2 {
-  background-image: url(../imagenes/Aconcagua20162.png);
-  background-attachment: fixed;
-  background-size: cover;
-  width: 100%;
-  color: white;
   font-size: large;
   padding-top: 4rem; }
 
@@ -544,7 +565,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 350%;
   font-weight: bold;
   color: white;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: black;
   border-radius: 30px;
   padding: 2.5rem; }
 
@@ -568,7 +589,7 @@ body::-webkit-scrollbar-thumb {
     justify-content: flex-start;
     align-items: flex-start;
     padding: 1.5rem;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: black;
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
     border-radius: 15px;
@@ -737,7 +758,7 @@ body::-webkit-scrollbar-thumb {
     text-align: center; }
   /*RESERVAS QUERIE*/
   .formulario {
-    margin: 2rem 1rem 2rem 1rem;
+    margin: 2rem 1rem 4rem 1rem;
     padding: 1rem; }
   /*NOSOTROS QUERIE*/
   .seccion-fondo3--2__titulo {
@@ -774,6 +795,7 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
     font-size: 80%; }
   .footer__datos {
+    padding-top: 0;
     height: 300px;
     font-size: small; }
   .footer__sugerencia {
@@ -788,7 +810,19 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
     padding-top: 0; }
   .footer__map {
-    height: 400px; } }
+    height: 400px; }
+  /*RESERVAS QUERIE*/
+  .fila {
+    padding: 3rem 1rem 3rem 1rem; }
+  .carrusel__parrafo {
+    margin-top: 0;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 2rem; }
+  .video__parrafo {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 20px; } }
 
 @media screen and (max-width: 690px) {
   /*INICIO QUERIE*/
@@ -798,8 +832,16 @@ body::-webkit-scrollbar-thumb {
       min-height: 80vh; }
     .seccion-fondo__subtitulo {
       font-size: 35px; }
+  /*RESERVAS QUERIE*/
+  .carrusel__parrafo {
+    font-size: 15px; }
+  .video__parrafo {
+    font-size: 15px; }
+  /*NOSOTROS QUERIE*/
+  .ocultar {
+    display: none; }
   /*PAGINAS QUERIE*/
-  .seccion-fondo2, .seccion-fondo2--1 {
+  .seccion-fondo2, .seccion-fondo2--1, .seccion-fondo2--2, .seccion-fondo2--3 {
     min-height: 80vh; }
     .seccion-fondo2__row {
       min-height: 80vh; }
@@ -835,8 +877,27 @@ body::-webkit-scrollbar-thumb {
     .seccion-fondo__jam {
       font-size: 40px;
       left: 46%; }
+  /*RESERVAS QUERIE*/
+  .formulario {
+    font-size: 15px; }
+    .formulario__boton {
+      margin-bottom: 0.5rem; }
+    .formulario__boton--2 {
+      margin-top: 0.5rem;
+      padding: 3px 9px 3px 9px; }
+  /*NOSOTROS SUBTITULO*/
+  .nosotros__subtitulo {
+    margin-right: 0;
+    font-size: 20px; }
+  .nosotros__descripcion {
+    margin-right: 0; }
+  /*PRODUCTOS QUERIE*/
+  .producto__precio {
+    padding: 3px 9px 3px 9px;
+    font-size: 15px;
+    margin-right: 0.4rem; }
   /*PAGINAS QUERIE*/
-  .seccion-fondo2, .seccion-fondo2--1 {
+  .seccion-fondo2, .seccion-fondo2--1, .seccion-fondo2--2, .seccion-fondo2--3 {
     min-height: 75vh; }
     .seccion-fondo2__row {
       min-height: 75vh; }

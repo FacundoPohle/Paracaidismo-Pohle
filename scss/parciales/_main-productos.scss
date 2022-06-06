@@ -4,24 +4,6 @@
 /*MAIN PRODUCTOS CODE*/
 /*MAIN PRODUCTOS CODE*/
 
-.seccion-fondo4--2 {
-    background-image: url(../imagenes/Aconcagua20162.png);
-    background-attachment: fixed;
-    background-size: cover;
-    width: 100%;
-    color: rgb(255, 255, 255);
-    font-size: large;
-    padding-top: 5rem;
-
-    &__titulo {
-        background-color: rgba(0, 0, 0, 0.5);
-        text-align: center;
-        font-size: 50px;
-        width: 100%;
-        padding: 1rem;
-    }
-}
-
 .borroso {
     background-color: rgba(244,235,235,0.2);
     -webkit-backdrop-filter: blur(15px);

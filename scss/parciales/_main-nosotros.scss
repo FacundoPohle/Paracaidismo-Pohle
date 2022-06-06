@@ -4,14 +4,7 @@
 /*MAIN NOSOTROS CODE*/
 /*MAIN NOSOTROS CODE*/
 
-.seccion-fondo3--2 {
-    background-image: url(../imagenes/Aconcagua20162.png);
-    background-attachment: fixed;
-    background-size: cover;
-    width: 100%;
-    color: rgb(255, 255, 255);
-    font-size: large;
-    padding-top: 4rem;
+.nosotros {
 
     &__row {
         min-height: 705px;
@@ -26,8 +19,9 @@
     }
 
     &__subtitulo {
+        text-align: justify;
         background-color: rgb(0, 0, 0);
-        color: $color-principal;
+        color: $color-secundario;
         padding: 2rem;
         margin-right: 1rem;
         font-weight: bold;
@@ -35,6 +29,7 @@
     }
     
     &__descripcion {
+        text-align: justify;
         background-color: rgba(243, 243, 243, 0.3);
         -webkit-backdrop-filter: blur(12px);
         backdrop-filter:blur(12px);
@@ -46,11 +41,11 @@
         font-weight: bold;
         box-shadow: 0px 0px 30px 6px rgb(0, 0, 0);
         transition: 1s;
-    }
 
-    .seccion-fondo3--2__descripcion:hover {
-        background-color: rgba(0, 0, 0, 0.8);
-        color: rgb(255, 255, 255);
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: rgb(255, 255, 255);
+        }
     }
 
     &__carrusel {
@@ -91,7 +86,7 @@
 
 .aside {
     background-color: rgb(0, 0, 0);
-    color: $color-principal;
+    color: $color-secundario;
     font-size: medium;
     padding: 1.5rem;
     box-shadow: 0px 0px 30px 6px rgb(0, 0, 0);

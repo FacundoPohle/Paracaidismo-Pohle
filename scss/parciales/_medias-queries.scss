@@ -148,7 +148,7 @@
  /*RESERVAS QUERIE*/
 
     .formulario {
-        margin: 2rem 1rem 2rem 1rem;
+        margin: 2rem 1rem 4rem 1rem;
         padding: 1rem;
     }
 
@@ -216,6 +216,7 @@
     }
 
     &__datos {
+        padding-top: 0;
         height: 300px;
         font-size: small;
     }
@@ -228,7 +229,7 @@
 
 @media screen and (max-width: 991px) {
 
-    /* FOOTER QUERIE */
+   /* FOOTER QUERIE */
     
     .footer__contacto {
         @include flexbox (column);
@@ -237,6 +238,25 @@
 
     .footer__map {
         height: 400px;
+    }
+
+   /*RESERVAS QUERIE*/
+
+    .fila {
+        padding: 3rem 1rem 3rem 1rem;
+    }
+
+    .carrusel__parrafo {
+        margin-top: 0;
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 2rem;
+    }
+
+    .video__parrafo {
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 20px;
     }
 }
 
@@ -255,6 +275,22 @@
         &__subtitulo {
             font-size: 35px;
         }
+    }
+
+    /*RESERVAS QUERIE*/
+
+    .carrusel__parrafo {
+        font-size: 15px;
+    }
+
+    .video__parrafo {
+        font-size: 15px;
+    }
+
+    /*NOSOTROS QUERIE*/ 
+
+    .ocultar {
+        display: none;
     }
 
     /*PAGINAS QUERIE*/
@@ -323,6 +359,40 @@
            font-size: 40px;
            left: 46%;
        }
+   }
+
+   /*RESERVAS QUERIE*/
+
+   .formulario {
+       font-size: 15px;
+
+       &__boton {
+           margin-bottom: 0.5rem;
+       }
+
+       &__boton--2 {
+           margin-top: 0.5rem;
+           padding: 3px 9px 3px 9px;
+       }
+   }
+
+   /*NOSOTROS SUBTITULO*/ 
+
+   .nosotros__subtitulo {
+       margin-right: 0;
+       font-size: 20px;
+   }
+
+   .nosotros__descripcion {
+       margin-right: 0;
+   }
+
+   /*PRODUCTOS QUERIE*/ 
+
+   .producto__precio {
+       padding: 3px 9px 3px 9px;
+       font-size: 15px;
+       margin-right: 0.4rem;
    }
 
    /*PAGINAS QUERIE*/

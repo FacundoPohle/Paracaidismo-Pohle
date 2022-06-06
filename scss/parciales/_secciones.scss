@@ -73,22 +73,28 @@
         font-size: 40px;
         color: $color-principal;
         position: absolute;
-        bottom: 0;
+        bottom: 1rem;
         left: 48%;
     }
 }
 
 .seccion-fondo2--1 {
     @extend .seccion-fondo2;
-    background-image: url(../imagenes/2a.svg);
+    background-image: url(../imagenes/2b.svg);
+}
 
-    &__jam {
-       @extend .seccion-fondo2__jam;
-    }
+.seccion-fondo2--2 {
+    @extend .seccion-fondo2;
+    background-image: url(../imagenes/1b.svg);
+}
+
+.seccion-fondo2--3 {
+    @extend .seccion-fondo2;
+    background-image: url(../imagenes/2a.svg);
 }
 
 .aconcagua {
-    background-image: url(../imagenes/Aconcagua20162.png);
+    background-image: url(../imagenes/Aconcagua2016.jpg);
     background-attachment: fixed;
     background-size: cover;
     width: 100%;
