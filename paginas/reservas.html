@@ -214,27 +214,29 @@
         <article  class="padding col-xxl-5 col-xl-5 col-lg-5 col-12">
             <form class="formulario" action="https://formsubmit.co/facundopohle@gmail.com" method="POST">
                 <div>
-                    <label for="nombre">Nombre:</label>
+                    <label for="nombre">Nombre/Name:</label>
                     <input type="text" id="nombre" name="nombre" placeholder="ingrese su nombre"  class="formulario__boton">
                 </div>
                 <div>
-                    <label for="apellido">Apellido:</label>
+                    <label for="apellido">Apellido/Lastname:</label>
                     <input type="text" id="apellido" name="apellido" placeholder="ingrese su apellido"  class="formulario__boton">
                 </div>
                 <div>
-                  <label for="edad">Edad:</label>
+                  <label for="edad">Edad/Age:</label>
                   <select name="edad" id="edad" class="formulario__boton">
+                      <option>Seleccionar</option>  
                       <option value="-18">-18</option>
                       <option value="+18">+18</option>
                       <option value="+60">+60</option>
                   </select>
                 </div>
                 <div>
-                  <label for="peso">Peso: (+90kg se ajusta a viento y presión atmosférica)</label>
-                  <input type="text" id="peso" name="peso" placeholder="ingrese su peso en kilogramos"  class="formulario__boton">
+                  <label for="peso">Peso/Weight: (+90kg se ajusta a viento y presión atmosférica/
+                    adjusts to wind and atmospheric pressure)</label>
+                  <input type="text" id="peso" name="peso" placeholder="ingrese su peso en kg"  class="formulario__boton">
                 </div>
                 <div>
-                  <label for="documentacion">Documentacion:</label>
+                  <label for="documentación">Doc./Documentation:</label>
                   <input type="text" id="documentacion" name="documentación" placeholder="ingrese su DNI o Pasaporte"  class="formulario__boton">
                 </div>
                 <div>
@@ -242,12 +244,17 @@
                     <input type="email" name="email" id="email" placeholder="ingrese su correo"  class="formulario__boton">
                 </div>
                 <div>
-                    <label for="fecha">Fecha de salto:</label>
+                  <label for="telefono">Teléfono/Phone number:</label>
+                  <input type="text" name="telefono" id="telefono" placeholder="ingrese su telefono"  class="formulario__boton">
+              </div>
+                <div>
+                    <label for="fecha">Fecha de salto/Jump date:</label>
                     <input type="date" id="fecha" name="fecha" class="formulario__boton">
                 </div>
                 <div>
-                    <label for="cantidad de personas">Cantidad de personas:</label>
+                    <label for="cantidad de personas">Cantidad de personas/Number of passengers:(Considerar clima/ consider weather)</label>
                     <select name="cantidad de personas" id="cantidad de personas" class="formulario__boton">
+                        <option>Seleccionar</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>

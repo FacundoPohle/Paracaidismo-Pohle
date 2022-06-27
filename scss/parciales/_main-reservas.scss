@@ -16,7 +16,7 @@
 
     &__boton {
         background-color: $color-secundario;
-        color: rgb(0, 0, 0);
+        color: grey;
         font-family: $fontbclackopsone;
         padding: 5px 12px 5px 12px;
         width: 100%;
@@ -39,7 +39,7 @@
 }
 
 ::placeholder {
-color: rgb(0, 0, 0);
+color: grey;
 }
 
 .fondo {

@@ -309,7 +309,7 @@ body::-webkit-scrollbar-thumb {
   font-family: "Black Ops One", cursive; }
   .formulario__boton {
     background-color: white;
-    color: black;
+    color: grey;
     font-family: "Black Ops One", cursive;
     padding: 5px 12px 5px 12px;
     width: 100%;
@@ -326,7 +326,7 @@ body::-webkit-scrollbar-thumb {
       transform: scale(120%); }
 
 ::placeholder {
-  color: black; }
+  color: grey; }
 
 .fondo {
   background-color: white;
