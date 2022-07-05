@@ -1,0 +1,2 @@
+-En la pagina de reservas anexé el simulador interactivo:
+-Se itera un bucle mediante el uso de "do" y "while", el cual mediante "prompts" solicita la selección de ciertas opciones de salto en paracaídas, una vez seleccionado éste, mediante un switch se anexan funciones que trabajan operaciones de manera condicional para resolver la suma total de los servicios solicitados en caso de que el cliente quiera los adicionales, de no quererlos señala la suma sola del salto en paracaidas, todos los precios salen por consola
