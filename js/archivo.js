@@ -16,19 +16,19 @@ const opcion1MasAdicional = () => {
     switch (total) {
         case 1:
             subopcion1 = opcion1 + alturaExtra;
-            console.log(`El precio total es de $ ${subopcion1}`)
+            alert(`El precio total es de $${subopcion1}`)
             break;
         case 2:
             subopcion1 = opcion1 + vinoEnElAire; 
-            console.log(`El precio total es de $ ${subopcion1}`)
+            alert(`El precio total es de $${subopcion1}`)
             break;
         case 3:
             subopcion1 = opcion1 + alturaExtra + vinoEnElAire;
-            console.log(`El precio total es de $ ${subopcion1}`)
+            alert(`El precio total es de $${subopcion1}`)
             break;
     
         default:
-            console.log(`El precio total es de $35000`)
+            alert(`El precio total es de $35000`)
             break;
     }
 }
@@ -37,19 +37,19 @@ const opcion2MasAdicional = () => {
     switch (total) {
         case 1:
             subopcion2 = opcion2 + alturaExtra;
-            console.log(`El precio total es de $ ${subopcion2}`)
+            alert(`El precio total es de $${subopcion2}`)
             break;
         case 2:
             subopcion2 = opcion2 + vinoEnElAire; 
-            console.log(`El precio total es de $ ${subopcion2}`)
+            alert(`El precio total es de $${subopcion2}`)
             break;
         case 3:
             subopcion2 = opcion2 + alturaExtra + vinoEnElAire;
-            console.log(`El precio total es de $ ${subopcion2}`)
+            alert(`El precio total es de $${subopcion2}`)
             break;
     
         default:
-            console.log(`El precio total es de $45000`)
+            alert(`El precio total es de $45000`)
             break;
     }
 }
