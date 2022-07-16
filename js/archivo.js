@@ -1,16 +1,43 @@
-// let opcion;
 
-// let opcion1 = 35000;
+let formulario1;
 
-// let subopcion1;
+let tipoSalto;
+let opcion;
+let opcion1;
+let subopcion1;
+let opcion2;
+let subopcion2;
+let alturaExtra;
+let vinoEnElAire;
 
-// let opcion2 = 45000;
+function inicializarFormulario1(){
+    // formulario1 = document.getElementById('formulario1');
+    // tipoSalto = document.getElementById('tipoSalto')
+    opcion1 = 35000;
+    opcion2 = 45000;
+    alturaExtra = 6000;
+    vinoEnElAire = 5000;
+}
 
-// let subopcion2;
+inicializarFormulario1();
 
-// let alturaExtra = 6000;
+function seleccionarTipoSalto(){
+    tipoSalto = document.getElementById('tipoSalto');
+    if(tipoSalto.value === 'opcion 1' || tipoSalto.value === 'opcion 2'){
+        // let otro = tipoSalto.value;
+        console.log(otro)
+        document.getElementById('extra').innerHTML = `<div>
+                                                       <select name="tipoSalto" id="tipoSaltoclass="formulario__boton">
+                                                              <option>Seleccionar adicionales</option>  
+                                                               <option value="camaraExtra">Camara extraoption>
+                                                              <option value="alturaExtra">Altura extraoption>
+                                                               <option value="degustacion">Degustacion dvino</option>
+                                                      </select>
+                                                    </div>`
+    }
+}
 
-// let vinoEnElAire = 5000;
+seleccionarTipoSalto();
 
 // const opcion1MasAdicional = () => {
 //     switch (total) {
@@ -82,7 +109,7 @@
 
 let datos = [];
 
-let formulario;
+let formulario2;
 
 let inputNombre;
 let inputApellido;
@@ -95,6 +122,7 @@ let inputFecha;
 let inputCantidadDePersonas;
 let inputMasculino;
 let inputFemenino;
+
 let error;
 
 
@@ -114,8 +142,8 @@ class Dato {
     }
 }
 
-function inicializarElementos(){
-    formulario = document.getElementById("formulario");
+function inicializarFormulario2(){
+    formulario2 = document.getElementById("formulario2");
     inputNombre = document.getElementById("nombre");
     inputApellido = document.getElementById("apellido");
     inputEdad = document.getElementById("edad");
@@ -127,28 +155,31 @@ function inicializarElementos(){
     inputCantidadDePersonas = document.getElementById("cantidadDePersonas");
     inputMasculino = document.getElementById("masculino");
     inputFemenino = document.getElementById("femenino");
-    // console.log(formulario, inputNombre, inputApellido, inputEdad, inputPeso, inputDocumentacion, inputEmail, inputTelefono, inputFecha, inputCantidadDePersonas, inputEmail);
 
     error = document.querySelector("#error")
-    error.innerHTML = `<p>*Por favor,completá los campos adecuadamente</p>`
+    error.innerHTML = `<p class="text-center text-danger shake-horizontal mt-3">*Por favor,completá los campos adecuadamente</p>`
     error.style.display = "none";
 }
 
-inicializarElementos();
+inicializarFormulario2();
 
 
-formulario.onsubmit = (event) => {
+formulario2.onsubmit = (event) => {
     event.preventDefault();
 
     let nuevoDato = new Dato(inputNombre.value, inputApellido.value, inputEdad.value, inputPeso.value, inputDocumentacion.value, inputEmail.value, inputTelefono.value, inputFecha.value, inputCantidadDePersonas.value, inputMasculino, inputFemenino);
+
     if(inputNombre.value != "" && inputApellido.value != "" && inputEdad.value != "" && inputPeso.value != "" && inputDocumentacion.value != "" && inputEmail.value != "" && inputTelefono.value != "" && inputFecha.value != "" && inputCantidadDePersonas.value != "" ){
+
         datos.push(nuevoDato)
 
         agregarDatos();
-    //     // errores.style.display = "none"
-        formulario.reset()
-        // console.log(nuevoDato)
-        error.style.display = 'none'
+
+        formulario2.reset()
+
+        error.innerHTML = `<p class="text-center text-success text-focus-in mt-3">¡Muchas gracias! Tu formulario ha sido enviado correctamente. A la brevedad nos contactaremos.</p>`
+        error.style.display = 'block'
+
     } else {
         error.style.display = 'block'
     }
@@ -170,6 +201,5 @@ function agregarDatos () {
           }else {
             console.log('femenino')
           }
-          alert('Muchas gracias, tu formulario fue enviado correctamente')
      })
 }
