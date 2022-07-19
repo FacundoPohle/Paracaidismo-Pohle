@@ -1,109 +1,154 @@
+let opciones = []
 
 let formulario1;
 
-let tipoSalto;
-let opcion;
-let opcion1;
-let subopcion1;
-let opcion2;
-let subopcion2;
-let alturaExtra;
-let vinoEnElAire;
+let inputTipoSalto;
+let inputAdicional;
+
+let presupuesto;
+
+class salto {
+    constructor(tipoSalto, adicional){
+        this.tipoSalto = tipoSalto;
+        this.adicional = adicional;
+    }
+}
 
 function inicializarFormulario1(){
-    // formulario1 = document.getElementById('formulario1');
-    // tipoSalto = document.getElementById('tipoSalto')
-    opcion1 = 35000;
-    opcion2 = 45000;
-    alturaExtra = 6000;
-    vinoEnElAire = 5000;
+    formulario1 = document.getElementById('formulario1');
+    inputTipoSalto = document.getElementById('tipoSalto');
+    inputAdicional = document.getElementById('adicional');
 }
 
 inicializarFormulario1();
 
-function seleccionarTipoSalto(){
-    tipoSalto = document.getElementById('tipoSalto');
-    if(tipoSalto.value === 'opcion 1' || tipoSalto.value === 'opcion 2'){
-        // let otro = tipoSalto.value;
-        console.log(otro)
-        document.getElementById('extra').innerHTML = `<div>
-                                                       <select name="tipoSalto" id="tipoSaltoclass="formulario__boton">
-                                                              <option>Seleccionar adicionales</option>  
-                                                               <option value="camaraExtra">Camara extraoption>
-                                                              <option value="alturaExtra">Altura extraoption>
-                                                               <option value="degustacion">Degustacion dvino</option>
-                                                      </select>
-                                                    </div>`
+let opcion1 = 35000;
+let opcion2 = 40000;
+let alturaExtra = 6000;
+let vinoEnElAire = 5000;
+
+formulario1.onsubmit = (event) => {
+    event.preventDefault();    
+
+    let nuevoSalto = new salto(inputTipoSalto.value, inputAdicional.value);
+ 
+    let opcion = inputTipoSalto.value
+
+    switch (opcion) {
+        case'opcion 1':
+            opcion1MasAdicional(adicional);
+            opciones.push(nuevoSalto)
+            agregarOpciones();
+            limpiarPresupuesto();
+            formulario1.reset();
+
+            break;
+        case 'opcion 2':
+            opcion2MasAdicional(adicional);
+            opciones.push(nuevoSalto)
+            agregarOpciones();
+            limpiarPresupuesto();
+            formulario1.reset();
+            break;
+
+        default:
+            alert("Selecciona adecuadamente los campos");
+            break;
     }
 }
 
-seleccionarTipoSalto();
+function agregarOpciones () {
+    opciones.forEach (salto => {
+         console.log(salto.tipoSalto)
+         console.log(salto.adicional)
+    })
+}
 
-// const opcion1MasAdicional = () => {
-//     switch (total) {
-//         case 1:
-//             subopcion1 = opcion1 + alturaExtra;
-//             alert(`El precio total es de $${subopcion1}`)
-//             break;
-//         case 2:
-//             subopcion1 = opcion1 + vinoEnElAire; 
-//             alert(`El precio total es de $${subopcion1}`)
-//             break;
-//         case 3:
-//             subopcion1 = opcion1 + alturaExtra + vinoEnElAire;
-//             alert(`El precio total es de $${subopcion1}`)
-//             break;
+function limpiarPresupuesto(){
+    while(resultado.length > 1){
+        resultado[0].remove
+    }
+}
+
+const opcion1MasAdicional = () => {
+
+    let adicional = inputAdicional.value;
+    let resultado;
+    switch (adicional) {
+        case 'alturaExtra':
+            subopcion1 = opcion1 + alturaExtra;
+            presupuesto = document.getElementById("presupuesto");
+            resultado = document.createElement('p');
+            resultado.innerHTML = `<p class="text-center">El precio total es de $${subopcion1}<p>`
+            presupuesto.append(resultado);
+            break;
+        case 'degustacion':
+            subopcion1 = opcion1 + vinoEnElAire; 
+            presupuesto = document.getElementById("presupuesto");
+            resultado = document.createElement('p');
+            resultado.innerHTML = `<p class="text-center">El precio total es de $${subopcion1}<p>`
+            presupuesto.append(resultado);
+            break;
+        case 'ambos':
+            subopcion1 = opcion1 + alturaExtra + vinoEnElAire;
+            presupuesto = document.getElementById("presupuesto");
+            resultado = document.createElement('p');
+            resultado.innerHTML = `<p class="text-center">El precio total es de $${subopcion1}<p>`
+            presupuesto.append(resultado);
+            break;
+        case 'ningunAdicional':
+            subopcion1 = opcion1;
+            presupuesto = document.getElementById("presupuesto");
+            resultado = document.createElement('p');
+            resultado.innerHTML = `<p class="text-center">El precio total es de $${subopcion1}<p>`
+            presupuesto.append(resultado);
+            break;
     
-//         default:
-//             alert(`El precio total es de $35000`)
-//             break;
-//     }
-// }
+        default:
+            alert(`Selecciona adecuadamente los campos`)
+            break;
+    }
+}
 
-// const opcion2MasAdicional = () => {
-//     switch (total) {
-//         case 1:
-//             subopcion2 = opcion2 + alturaExtra;
-//             alert(`El precio total es de $${subopcion2}`)
-//             break;
-//         case 2:
-//             subopcion2 = opcion2 + vinoEnElAire; 
-//             alert(`El precio total es de $${subopcion2}`)
-//             break;
-//         case 3:
-//             subopcion2 = opcion2 + alturaExtra + vinoEnElAire;
-//             alert(`El precio total es de $${subopcion2}`)
-//             break;
+const opcion2MasAdicional = () => {
+
+    let adicional = inputAdicional.value;
+    let resultado;
+    switch (adicional) {
+        case 'alturaExtra':
+            subopcion1 = opcion2 + alturaExtra;
+            presupuesto = document.getElementById("presupuesto");
+            resultado = document.createElement('p');
+            resultado.innerHTML = `<p class="text-center">El precio total es de $${subopcion1}<p>`
+            presupuesto.append(resultado);
+            break;
+        case 'degustacion':
+            subopcion1 = opcion2 + vinoEnElAire; 
+            presupuesto = document.getElementById("presupuesto");
+            resultado = document.createElement('p');
+            resultado.innerHTML = `<p class="text-center">El precio total es de $${subopcion1}<p>`
+            presupuesto.append(resultado);
+            break;
+        case 'ambos':
+            subopcion1 = opcion2 + alturaExtra + vinoEnElAire;
+            presupuesto = document.getElementById("presupuesto");
+            resultado = document.createElement('p');
+            resultado.innerHTML = `<p class="text-center">El precio total es de $${subopcion1}<p>`
+            presupuesto.append(resultado);
+            break;
+        case 'ningunAdicional':
+            subopcion1 = opcion2;
+            presupuesto = document.getElementById("presupuesto");
+            resultado = document.createElement('p');
+            resultado.innerHTML = `<p class="text-center">El precio total es de $${subopcion1}<p>`
+            presupuesto.append(resultado);
+            break;
     
-//         default:
-//             alert(`El precio total es de $45000`)
-//             break;
-//     }
-// }
-
-// do {
-//     opcion = Number(prompt("Elija una opcion de salto:\n\n1 - Opcion 1\n2 - Opcion 2\n3 - Salir"))
-
-//     switch (opcion) {
-//         case 1:
-//             total = Number(prompt ("Si desea un adicional seleccione la opcion:\n\n1 - Altura extra\n2 - Degustacion de vno en el aire\n3 - Ambos\n4- Ningún adicional"));
-//             opcion1MasAdicional(total);
-//             break;
-//         case 2:
-//             total = Number(prompt ("Si desea un adicional seleccione la opcion:\n\n1 - Altura extra\n2 - Degustacion de vno en el aire\n3 - Ambos\n4- Ningun adicional"));
-//             opcion2MasAdicional(total);
-//             break;
-//         case 3:
-//             alert("Gracias por su tiempo");
-//             break;
-//         default:
-//             alert("Opcion incorrecta");
-//             break;
-//     }
-
-// } while(opcion !== 3);
-
-
+        default:
+            alert(`Selecciona adecuadamente los campos`)
+            break;
+    }
+}
 
 
 
@@ -169,7 +214,7 @@ formulario2.onsubmit = (event) => {
 
     let nuevoDato = new Dato(inputNombre.value, inputApellido.value, inputEdad.value, inputPeso.value, inputDocumentacion.value, inputEmail.value, inputTelefono.value, inputFecha.value, inputCantidadDePersonas.value, inputMasculino, inputFemenino);
 
-    if(inputNombre.value != "" && inputApellido.value != "" && inputEdad.value != "" && inputPeso.value != "" && inputDocumentacion.value != "" && inputEmail.value != "" && inputTelefono.value != "" && inputFecha.value != "" && inputCantidadDePersonas.value != "" ){
+    if(inputNombre.value != "" && inputApellido.value != "" && inputEdad.value != "" && inputPeso.value != "" && inputDocumentacion.value != "" && inputEmail.value != "" && inputTelefono.value != "" && inputFecha.value != "" && inputCantidadDePersonas !== "" ){
 
         datos.push(nuevoDato)
 

@@ -66,4 +66,6 @@ if(productosEnCarro.length > 0) {
     let email = prompt('Ingrese su eamail');
     let tel = prompt('Ingrese su tel');
     comprar(nombre, productosEnCarro)
+    console.log(email, tel)
 }
+
