@@ -1,3 +1,5 @@
+/*FORMULARIO DE PRESUPUESTO*/
+
 let opciones = []
 
 let formulario1;
@@ -39,7 +41,6 @@ formulario1.onsubmit = (event) => {
             opcion1MasAdicional(adicional);
             opciones.push(nuevoSalto)
             agregarOpciones();
-            limpiarPresupuesto();
             formulario1.reset();
 
             break;
@@ -47,7 +48,6 @@ formulario1.onsubmit = (event) => {
             opcion2MasAdicional(adicional);
             opciones.push(nuevoSalto)
             agregarOpciones();
-            limpiarPresupuesto();
             formulario1.reset();
             break;
 
@@ -64,44 +64,29 @@ function agregarOpciones () {
     })
 }
 
-function limpiarPresupuesto(){
-    while(resultado.length > 1){
-        resultado[0].remove
-    }
-}
-
 const opcion1MasAdicional = () => {
 
     let adicional = inputAdicional.value;
-    let resultado;
     switch (adicional) {
         case 'alturaExtra':
             subopcion1 = opcion1 + alturaExtra;
             presupuesto = document.getElementById("presupuesto");
-            resultado = document.createElement('p');
-            resultado.innerHTML = `<p class="text-center">El precio total es de $${subopcion1}<p>`
-            presupuesto.append(resultado);
+            presupuesto.innerHTML = `<p class="text-center">El precio total es de $${subopcion1}<p>`
             break;
         case 'degustacion':
             subopcion1 = opcion1 + vinoEnElAire; 
             presupuesto = document.getElementById("presupuesto");
-            resultado = document.createElement('p');
-            resultado.innerHTML = `<p class="text-center">El precio total es de $${subopcion1}<p>`
-            presupuesto.append(resultado);
+            presupuesto.innerHTML = `<p class="text-center">El precio total es de $${subopcion1}<p>`
             break;
         case 'ambos':
             subopcion1 = opcion1 + alturaExtra + vinoEnElAire;
             presupuesto = document.getElementById("presupuesto");
-            resultado = document.createElement('p');
-            resultado.innerHTML = `<p class="text-center">El precio total es de $${subopcion1}<p>`
-            presupuesto.append(resultado);
+            presupuesto.innerHTML = `<p class="text-center">El precio total es de $${subopcion1}<p>`
             break;
         case 'ningunAdicional':
             subopcion1 = opcion1;
             presupuesto = document.getElementById("presupuesto");
-            resultado = document.createElement('p');
-            resultado.innerHTML = `<p class="text-center">El precio total es de $${subopcion1}<p>`
-            presupuesto.append(resultado);
+            presupuesto.innerHTML = `<p class="text-center">El precio total es de $${subopcion1}<p>`
             break;
     
         default:
@@ -113,35 +98,26 @@ const opcion1MasAdicional = () => {
 const opcion2MasAdicional = () => {
 
     let adicional = inputAdicional.value;
-    let resultado;
     switch (adicional) {
         case 'alturaExtra':
             subopcion1 = opcion2 + alturaExtra;
             presupuesto = document.getElementById("presupuesto");
-            resultado = document.createElement('p');
-            resultado.innerHTML = `<p class="text-center">El precio total es de $${subopcion1}<p>`
-            presupuesto.append(resultado);
+            presupuesto.innerHTML = `<p class="text-center">El precio total es de $${subopcion1}<p>`
             break;
         case 'degustacion':
             subopcion1 = opcion2 + vinoEnElAire; 
             presupuesto = document.getElementById("presupuesto");
-            resultado = document.createElement('p');
-            resultado.innerHTML = `<p class="text-center">El precio total es de $${subopcion1}<p>`
-            presupuesto.append(resultado);
+            presupuesto.innerHTML = `<p class="text-center">El precio total es de $${subopcion1}<p>`
             break;
         case 'ambos':
             subopcion1 = opcion2 + alturaExtra + vinoEnElAire;
             presupuesto = document.getElementById("presupuesto");
-            resultado = document.createElement('p');
-            resultado.innerHTML = `<p class="text-center">El precio total es de $${subopcion1}<p>`
-            presupuesto.append(resultado);
+            presupuesto.innerHTML = `<p class="text-center">El precio total es de $${subopcion1}<p>`
             break;
         case 'ningunAdicional':
             subopcion1 = opcion2;
             presupuesto = document.getElementById("presupuesto");
-            resultado = document.createElement('p');
-            resultado.innerHTML = `<p class="text-center">El precio total es de $${subopcion1}<p>`
-            presupuesto.append(resultado);
+            presupuesto.innerHTML = `<p class="text-center">El precio total es de $${subopcion1}<p>`
             break;
     
         default:
@@ -151,6 +127,7 @@ const opcion2MasAdicional = () => {
 }
 
 
+/*FORMULARIO DE CONTACTO*/
 
 let datos = [];
 
@@ -169,7 +146,6 @@ let inputMasculino;
 let inputFemenino;
 
 let error;
-
 
 class Dato {
     constructor(nombre, apellido, edad, peso, documentacion, email, telefono, fecha, cantidadDePersonas, masculino, femenino){
