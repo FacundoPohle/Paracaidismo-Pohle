@@ -13,7 +13,7 @@ class salto {
     constructor(tipoSalto, adicional){
         this.tipoSalto = tipoSalto;
         this.adicional = adicional;
-    }
+   }
 }
 
 function inicializarFormulario1(){
