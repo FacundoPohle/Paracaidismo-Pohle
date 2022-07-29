@@ -24,8 +24,8 @@ function inicializarFormulario1(){
 
 inicializarFormulario1();
 
-let opcion1 = 35000;
-let opcion2 = 40000;
+let opcion1 = 40000;
+let opcion2 = 52000;
 let alturaExtra = 6000;
 let vinoEnElAire = 5000;
 
@@ -128,8 +128,7 @@ const opcion2MasAdicional = () => {
 
 
 /*FORMULARIO DE CONTACTO*/
-
-let datos = [];
+let datos = []
 
 let formulario2;
 
@@ -182,45 +181,56 @@ function inicializarFormulario2(){
     error.style.display = "none";
 }
 
+
 inicializarFormulario2();
 
+datosJSON = JSON.parse(localStorage.getItem('datos'));
+
+console.log(datosJSON)
 
 formulario2.onsubmit = (event) => {
     event.preventDefault();
-
+    
     let nuevoDato = new Dato(inputNombre.value, inputApellido.value, inputEdad.value, inputPeso.value, inputDocumentacion.value, inputEmail.value, inputTelefono.value, inputFecha.value, inputCantidadDePersonas.value, inputMasculino, inputFemenino);
+    
 
     if(inputNombre.value != "" && inputApellido.value != "" && inputEdad.value != "" && inputPeso.value != "" && inputDocumentacion.value != "" && inputEmail.value != "" && inputTelefono.value != "" && inputFecha.value != "" && inputCantidadDePersonas !== "" ){
-
+        
         datos.push(nuevoDato)
+        
+        let datosJSON = JSON.stringify (datos)  
 
-        agregarDatos();
+        localStorage.setItem('datos', datosJSON)
 
+        // agregarDatos();
+        
         formulario2.reset()
-
+        
+        
         error.innerHTML = `<p class="text-center text-success text-focus-in mt-3">¡Muchas gracias! Tu formulario ha sido enviado correctamente. A la brevedad nos contactaremos.</p>`
         error.style.display = 'block'
-
+        
     } else {
         error.style.display = 'block'
     }
 }
 
-function agregarDatos () {
-     datos.forEach (dato => {
-          console.log(dato.nombre)
-          console.log(dato.apellido)
-          console.log(dato.edad)
-          console.log(dato.peso)
-          console.log(dato.documentacion)
-          console.log(dato.email)
-          console.log(dato.telefono)
-          console.log(dato.fecha)
-          console.log(dato.cantidadDePersonas)
-          if (inputMasculino.checked) {
-            console.log('masculino')
-          }else {
-            console.log('femenino')
-          }
-     })
-}
+
+// function agregarDatos () {
+//     datos.forEach (dato => {
+//         console.log(dato.nombre)
+//           console.log(dato.apellido)
+//           console.log(dato.edad)
+//           console.log(dato.peso)
+//           console.log(dato.documentacion)
+//           console.log(dato.email)
+//           console.log(dato.telefono)
+//           console.log(dato.fecha)
+//           console.log(dato.cantidadDePersonas)
+//           if (inputMasculino.checked) {
+//             console.log('masculino')
+//           }else {
+//             console.log('femenino')
+//           }
+//      })
+// }
