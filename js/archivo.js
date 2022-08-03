@@ -46,7 +46,11 @@ formulario1.onsubmit = (event) => {
             formulario1.reset();
             break;
         default:
-            alert("Selecciona adecuadamente los campos");
+            Swal.fire({
+                title: 'Selecciona adecuadamente los campos',
+                icon: 'warning',
+                confirmButtonText: 'Aceptar',
+              });
             break;
     }
 }
@@ -84,7 +88,11 @@ const opcion1MasAdicional = () => {
             break;
     
         default:
-            alert(`Selecciona adecuadamente los campos`)
+            Swal.fire({
+                title: 'Selecciona adecuadamente los campos',
+                icon: 'warning',
+                confirmButtonText: 'Aceptar',
+              });
             break;
     }
 }
@@ -115,7 +123,11 @@ const opcion2MasAdicional = () => {
             break;
     
         default:
-            alert(`Selecciona adecuadamente los campos`)
+            Swal.fire({
+                title: 'Selecciona adecuadamente los campos',
+                icon: 'warning',
+                confirmButtonText: 'Aceptar',
+              });
             break;
     }
 }
@@ -134,7 +146,7 @@ let inputFecha;
 let inputCantidadDePersonas;
 let inputMasculino;
 let inputFemenino;
-let error;
+// let error;
 
 class Dato {
     constructor(nombre, apellido, edad, peso, documentacion, email, telefono, fecha, cantidadDePersonas, masculino, femenino){
@@ -165,9 +177,9 @@ function inicializarFormulario2(){
     inputCantidadDePersonas = document.getElementById("cantidadDePersonas");
     inputMasculino = document.getElementById("masculino");
     inputFemenino = document.getElementById("femenino");
-    error = document.querySelector("#error")
-    error.innerHTML = `<p class="text-center text-danger shake-horizontal mt-3">*Por favor,completá los campos adecuadamente</p>`
-    error.style.display = "none";
+    // error = document.querySelector("#error")
+    // error.innerHTML = `<p class="text-center text-danger shake-horizontal mt-3">*Por favor,completá los campos adecuadamente</p>`
+    // error.style.display = "none";
 }
 
 
@@ -195,12 +207,23 @@ formulario2.onsubmit = (event) => {
         
         formulario2.reset()
         
-        
-        error.innerHTML = `<p class="text-center text-success text-focus-in mt-3">¡Muchas gracias! Tu formulario ha sido enviado correctamente. A la brevedad nos contactaremos.</p>`
-        error.style.display = 'block'
+        Swal.fire({
+            title: 'Tu formulario fue enviado correctamente',
+            text: 'A la brevedad te vamos a contactar',
+            icon: 'success',
+            confirmButtonText: 'Aceptar',
+          });
+        // error.innerHTML = `<p class="text-center text-success text-focus-in mt-3">¡Muchas gracias! Tu formulario ha sido enviado correctamente. A la brevedad nos contactaremos.</p>`
+        // error.style.display = 'block'
         
     } else {
-        error.style.display = 'block'
+        Swal.fire({
+            title: 'Completa adecuadamente el formulario',
+            text: 'Revisá y llena todos los campos',
+            icon: 'error',
+            confirmButtonText: 'Aceptar',
+          });
+        // error.style.display = 'block'
     }
 }
 
