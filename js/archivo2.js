@@ -47,9 +47,8 @@ while (tipo != 'salir' && tipo != null) {
   
        let productoParaCarro = productosFiltradoPorTipo.find((item) => item.id == idSeleccionado);
   
-       if(productoParaCarro) {
-          productosEnCarro.push(productoParaCarro); 
-       }
+       productoParaCarro && productosEnCarro.push(productoParaCarro); 
+
     }
 }
 

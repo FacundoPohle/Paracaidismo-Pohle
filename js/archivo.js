@@ -1,12 +1,9 @@
 /*FORMULARIO DE PRESUPUESTO*/
 
 let opciones = []
-
 let formulario1;
-
 let inputTipoSalto;
 let inputAdicional;
-
 let presupuesto;
 
 class salto {
@@ -33,7 +30,6 @@ formulario1.onsubmit = (event) => {
     event.preventDefault();    
 
     let nuevoSalto = new salto(inputTipoSalto.value, inputAdicional.value);
- 
     let opcion = inputTipoSalto.value
 
     switch (opcion) {
@@ -42,7 +38,6 @@ formulario1.onsubmit = (event) => {
             opciones.push(nuevoSalto)
             agregarOpciones();
             formulario1.reset();
-
             break;
         case 'opcion 2':
             opcion2MasAdicional(adicional);
@@ -50,7 +45,6 @@ formulario1.onsubmit = (event) => {
             agregarOpciones();
             formulario1.reset();
             break;
-
         default:
             alert("Selecciona adecuadamente los campos");
             break;
@@ -126,12 +120,9 @@ const opcion2MasAdicional = () => {
     }
 }
 
-
 /*FORMULARIO DE CONTACTO*/
 let datos = []
-
 let formulario2;
-
 let inputNombre;
 let inputApellido;
 let inputEdad;
@@ -143,7 +134,6 @@ let inputFecha;
 let inputCantidadDePersonas;
 let inputMasculino;
 let inputFemenino;
-
 let error;
 
 class Dato {
@@ -175,7 +165,6 @@ function inicializarFormulario2(){
     inputCantidadDePersonas = document.getElementById("cantidadDePersonas");
     inputMasculino = document.getElementById("masculino");
     inputFemenino = document.getElementById("femenino");
-
     error = document.querySelector("#error")
     error.innerHTML = `<p class="text-center text-danger shake-horizontal mt-3">*Por favor,completá los campos adecuadamente</p>`
     error.style.display = "none";
@@ -184,14 +173,14 @@ function inicializarFormulario2(){
 
 inicializarFormulario2();
 
-datosJSON = JSON.parse(localStorage.getItem('datos'));
+datosJSON = JSON.parse(localStorage.getItem('datos')) || [];
 
 console.log(datosJSON)
 
 formulario2.onsubmit = (event) => {
     event.preventDefault();
     
-    let nuevoDato = new Dato(inputNombre.value, inputApellido.value, inputEdad.value, inputPeso.value, inputDocumentacion.value, inputEmail.value, inputTelefono.value, inputFecha.value, inputCantidadDePersonas.value, inputMasculino, inputFemenino);
+    let nuevoDato = new Dato(inputNombre.value , inputApellido.value, inputEdad.value, inputPeso.value, inputDocumentacion.value, inputEmail.value, inputTelefono.value, inputFecha.value, inputCantidadDePersonas.value, inputMasculino, inputFemenino);
     
 
     if(inputNombre.value != "" && inputApellido.value != "" && inputEdad.value != "" && inputPeso.value != "" && inputDocumentacion.value != "" && inputEmail.value != "" && inputTelefono.value != "" && inputFecha.value != "" && inputCantidadDePersonas !== "" ){
@@ -202,7 +191,7 @@ formulario2.onsubmit = (event) => {
 
         localStorage.setItem('datos', datosJSON)
 
-        // agregarDatos();
+        agregarDatos();
         
         formulario2.reset()
         
@@ -216,21 +205,18 @@ formulario2.onsubmit = (event) => {
 }
 
 
-// function agregarDatos () {
-//     datos.forEach (dato => {
-//         console.log(dato.nombre)
-//           console.log(dato.apellido)
-//           console.log(dato.edad)
-//           console.log(dato.peso)
-//           console.log(dato.documentacion)
-//           console.log(dato.email)
-//           console.log(dato.telefono)
-//           console.log(dato.fecha)
-//           console.log(dato.cantidadDePersonas)
-//           if (inputMasculino.checked) {
-//             console.log('masculino')
-//           }else {
-//             console.log('femenino')
-//           }
-//      })
-// }
+function agregarDatos () {
+    datos.forEach (dato => {
+        console.log(dato.nombre)
+          console.log(dato.apellido)
+          console.log(dato.edad)
+          console.log(dato.peso)
+          console.log(dato.documentacion)
+          console.log(dato.email)
+          console.log(dato.telefono)
+          console.log(dato.fecha)
+          console.log(dato.cantidadDePersonas)
+          inputMasculino.checked ? console.log('masculino') : console.log('femenino')
+          
+     })
+}
