@@ -1,30 +1,11 @@
-/*FORMULARIO DE PRESUPUESTO*/
-
-let opciones = []
-let formulario1;
-let inputTipoSalto;
-let inputAdicional;
-let presupuesto;
-
-class salto {
-    constructor(tipoSalto, adicional){
-        this.tipoSalto = tipoSalto;
-        this.adicional = adicional;
-   }
-}
+/*FORMULARIO 1*/
 
 function inicializarFormulario1(){
     formulario1 = document.getElementById('formulario1');
     inputTipoSalto = document.getElementById('tipoSalto');
     inputAdicional = document.getElementById('adicional');
 }
-
 inicializarFormulario1();
-
-let opcion1 = 40000;
-let opcion2 = 52000;
-let alturaExtra = 6000;
-let vinoEnElAire = 5000;
 
 formulario1.onsubmit = (event) => {
     event.preventDefault();    
@@ -69,22 +50,22 @@ const opcion1MasAdicional = () => {
         case 'alturaExtra':
             subopcion1 = opcion1 + alturaExtra;
             presupuesto = document.getElementById("presupuesto");
-            presupuesto.innerHTML = `<p class="text-center">El precio total es de $${subopcion1}<p>`
+            presupuesto.innerHTML = `<p class="text-center text-focus-in">El precio total es de $${subopcion1}<p>`
             break;
         case 'degustacion':
             subopcion1 = opcion1 + vinoEnElAire; 
             presupuesto = document.getElementById("presupuesto");
-            presupuesto.innerHTML = `<p class="text-center">El precio total es de $${subopcion1}<p>`
+            presupuesto.innerHTML = `<p class="text-center text-focus-in">El precio total es de $${subopcion1}<p>`
             break;
         case 'ambos':
             subopcion1 = opcion1 + alturaExtra + vinoEnElAire;
             presupuesto = document.getElementById("presupuesto");
-            presupuesto.innerHTML = `<p class="text-center">El precio total es de $${subopcion1}<p>`
+            presupuesto.innerHTML = `<p class="text-center text-focus-in">El precio total es de $${subopcion1}<p>`
             break;
         case 'ningunAdicional':
             subopcion1 = opcion1;
             presupuesto = document.getElementById("presupuesto");
-            presupuesto.innerHTML = `<p class="text-center">El precio total es de $${subopcion1}<p>`
+            presupuesto.innerHTML = `<p class="text-center text-focus-in">El precio total es de $${subopcion1}<p>`
             break;
     
         default:
@@ -104,22 +85,22 @@ const opcion2MasAdicional = () => {
         case 'alturaExtra':
             subopcion1 = opcion2 + alturaExtra;
             presupuesto = document.getElementById("presupuesto");
-            presupuesto.innerHTML = `<p class="text-center">El precio total es de $${subopcion1}<p>`
+            presupuesto.innerHTML = `<p class="text-center text-focus-in">El precio total es de $${subopcion1}<p>`
             break;
         case 'degustacion':
             subopcion1 = opcion2 + vinoEnElAire; 
             presupuesto = document.getElementById("presupuesto");
-            presupuesto.innerHTML = `<p class="text-center">El precio total es de $${subopcion1}<p>`
+            presupuesto.innerHTML = `<p class="text-center text-focus-in">El precio total es de $${subopcion1}<p>`
             break;
         case 'ambos':
             subopcion1 = opcion2 + alturaExtra + vinoEnElAire;
             presupuesto = document.getElementById("presupuesto");
-            presupuesto.innerHTML = `<p class="text-center">El precio total es de $${subopcion1}<p>`
+            presupuesto.innerHTML = `<p class="text-center text-focus-in">El precio total es de $${subopcion1}<p>`
             break;
         case 'ningunAdicional':
             subopcion1 = opcion2;
             presupuesto = document.getElementById("presupuesto");
-            presupuesto.innerHTML = `<p class="text-center">El precio total es de $${subopcion1}<p>`
+            presupuesto.innerHTML = `<p class="text-center text-focus-in">El precio total es de $${subopcion1}<p>`
             break;
     
         default:
@@ -132,37 +113,7 @@ const opcion2MasAdicional = () => {
     }
 }
 
-/*FORMULARIO DE CONTACTO*/
-let datos = []
-let formulario2;
-let inputNombre;
-let inputApellido;
-let inputEdad;
-let inputPeso;
-let inputDocumentacion;
-let inputEmail;
-let inputTelefono;
-let inputFecha;
-let inputCantidadDePersonas;
-let inputMasculino;
-let inputFemenino;
-// let error;
-
-class Dato {
-    constructor(nombre, apellido, edad, peso, documentacion, email, telefono, fecha, cantidadDePersonas, masculino, femenino){
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.edad = edad;
-        this.peso = peso;
-        this.documentacion = documentacion;
-        this.email = email;
-        this.telefono = telefono
-        this.fecha = fecha;
-        this.cantidadDePersonas = cantidadDePersonas;
-        this.masculino = masculino;
-        this.femenino = femenino;
-    }
-}
+/*FORMULARIO 2*/
 
 function inicializarFormulario2(){
     formulario2 = document.getElementById("formulario2");
@@ -177,44 +128,51 @@ function inicializarFormulario2(){
     inputCantidadDePersonas = document.getElementById("cantidadDePersonas");
     inputMasculino = document.getElementById("masculino");
     inputFemenino = document.getElementById("femenino");
-    // error = document.querySelector("#error")
-    // error.innerHTML = `<p class="text-center text-danger shake-horizontal mt-3">*Por favor,completá los campos adecuadamente</p>`
-    // error.style.display = "none";
 }
-
-
 inicializarFormulario2();
 
-datosJSON = JSON.parse(localStorage.getItem('datos')) || [];
 
+
+datosJSON = JSON.parse(localStorage.getItem('datos')) || [];
 console.log(datosJSON)
+
+
 
 formulario2.onsubmit = (event) => {
     event.preventDefault();
     
-    let nuevoDato = new Dato(inputNombre.value , inputApellido.value, inputEdad.value, inputPeso.value, inputDocumentacion.value, inputEmail.value, inputTelefono.value, inputFecha.value, inputCantidadDePersonas.value, inputMasculino, inputFemenino);
-    
+    let nuevoDato = new Dato(inputNombre.value , inputApellido.value, inputEdad.value, inputPeso.value, inputDocumentacion.value, inputEmail.value, inputTelefono.value, inputFecha.value, inputCantidadDePersonas.value, inputMasculino, inputFemenino); 
 
     if(inputNombre.value != "" && inputApellido.value != "" && inputEdad.value != "" && inputPeso.value != "" && inputDocumentacion.value != "" && inputEmail.value != "" && inputTelefono.value != "" && inputFecha.value != "" && inputCantidadDePersonas !== "" ){
         
-        datos.push(nuevoDato)
-        
+        datos.push(nuevoDato) 
         let datosJSON = JSON.stringify (datos)  
 
         localStorage.setItem('datos', datosJSON)
-
-        agregarDatos();
-        
+        agregarDatos(); 
         formulario2.reset()
-        
+
+        fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+                body: JSON.stringify({
+                    title: 'envio de formulario',
+                    body: JSON.stringify (datos),
+                    user: 1,
+                }),
+                headers: {
+                    'content-type': 'application/json; charset=UTF-8'
+                },
+        })
+          .then((response) => response.json())
+          .then((data) => console.log(data)) 
+
         Swal.fire({
             title: 'Tu formulario fue enviado correctamente',
             text: 'A la brevedad te vamos a contactar',
             icon: 'success',
             confirmButtonText: 'Aceptar',
           });
-        // error.innerHTML = `<p class="text-center text-success text-focus-in mt-3">¡Muchas gracias! Tu formulario ha sido enviado correctamente. A la brevedad nos contactaremos.</p>`
-        // error.style.display = 'block'
+
         
     } else {
         Swal.fire({
@@ -223,10 +181,8 @@ formulario2.onsubmit = (event) => {
             icon: 'error',
             confirmButtonText: 'Aceptar',
           });
-        // error.style.display = 'block'
     }
 }
-
 
 function agregarDatos () {
     datos.forEach (dato => {
@@ -239,7 +195,6 @@ function agregarDatos () {
           console.log(dato.telefono)
           console.log(dato.fecha)
           console.log(dato.cantidadDePersonas)
-          inputMasculino.checked ? console.log('masculino') : console.log('femenino')
-          
+          inputMasculino.checked ? console.log('masculino') : console.log('femenino')  
      })
 }
